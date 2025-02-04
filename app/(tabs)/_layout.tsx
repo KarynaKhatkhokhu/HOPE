@@ -34,10 +34,24 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="squareBreathing"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Square Breathing',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="square" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="tippSkill"
+        options={{
+          title: 'TIPP',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="cold" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="stopSkill"
+        options={{
+          title: 'STOP',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="STOP" color={color} />,
         }}
       />
     </Tabs>
