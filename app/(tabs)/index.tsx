@@ -5,8 +5,8 @@ import { useEffect } from 'react';
 import { Appearance } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 
-// Load color schemes for light/dark mode
 Colors.loadSchemes({
   light: {
     background: '#BCA1DC',
@@ -21,12 +21,7 @@ Colors.loadSchemes({
 });
 
 export default function HomeScreen() {
-  useEffect(() => {
-    const subscription = Appearance.addChangeListener(({ colorScheme }) => {
-      Colors.setScheme(colorScheme);
-    });
-    return () => subscription.remove();
-  }, []);
+  useThemeRefresh();
 
   return (
     <ParallaxScrollView

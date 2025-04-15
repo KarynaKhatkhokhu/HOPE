@@ -1,10 +1,8 @@
-import React from 'react';
-import { Card } from 'react-native-ui-lib';
+import React, { useEffect, useState } from 'react';
+import { ScrollView, Appearance } from 'react-native';
+import { Card, Colors } from 'react-native-ui-lib';
+import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 import cardData from '../../assets/texts/tippCardTexts.json'; 
-import { ScrollView } from 'react-native';
-import { useEffect } from 'react';
-import { Colors } from 'react-native-ui-lib';
-import { Appearance } from 'react-native';
 
 Colors.loadSchemes({
   light: {
@@ -55,12 +53,7 @@ const ImageCard = ({cardText, cardImage, cardTitle}) => {
 };
 
 export default function TippSkill() {
-  useEffect(() => {
-    const subscription = Appearance.addChangeListener(({ colorScheme }) => {
-      Colors.setScheme(colorScheme);
-    });
-    return () => subscription.remove();
-  }, []);
+  useThemeRefresh();
 
   return (
     <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenBG}}>
@@ -70,3 +63,4 @@ export default function TippSkill() {
     </ScrollView>
   )
 };
+

@@ -13,17 +13,17 @@ import { Colors } from 'react-native-ui-lib';
 Colors.loadSchemes({
   light: {
     screenBG: Colors.grey80,
-    cardBG: Colors.white,
     textColor: Colors.black,
-    secondary: '#ccc',
+    secondary: Colors.grey60,
     accentColor: Colors.black,
+    buttonColor: Colors.grey50,
   },
   dark: {
     screenBG: Colors.grey10,
-    cardBG: Colors.grey20,
     textColor: Colors.white,
-    secondary: '#555',
-    accentColor: Colors.grey20
+    secondary: Colors.grey20,
+    accentColor: Colors.white,
+    buttonColor: Colors.black,
   },
 });
 
@@ -239,13 +239,13 @@ const getThemedStyles = (scheme) =>
     },
     button: {
       padding: 15,
-      backgroundColor: Colors.accentColor,
+      backgroundColor: Colors.buttonColor,
       borderRadius: 10,
       alignItems: 'center',
       marginHorizontal: 5,
     },
     buttonText: {
-      color: '#fff',
+      color: Colors.textColor,
       fontSize: 18,
       fontWeight: '600',
     },
