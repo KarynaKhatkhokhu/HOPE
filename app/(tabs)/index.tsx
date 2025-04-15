@@ -1,55 +1,54 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
+import React from 'react';
+import { Image, Platform, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, Colors } from 'react-native-ui-lib';
+import { useEffect } from 'react';
+import { Appearance } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+
+// Load color schemes for light/dark mode
+Colors.loadSchemes({
+  light: {
+    background: '#BCA1DC',
+    titleColor: Colors.black,
+    textColor: Colors.grey90,
+  },
+  dark: {
+    background: '#321D47',
+    titleColor: Colors.white,
+    textColor: Colors.grey70,
+  },
+});
 
 export default function HomeScreen() {
+  useEffect(() => {
+    const subscription = Appearance.addChangeListener(({ colorScheme }) => {
+      Colors.setScheme(colorScheme);
+    });
+    return () => subscription.remove();
+  }, []);
+
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: Colors.background, dark: Colors.background }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/purple_sun_graphic_11.png')}
+          style={styles.logo}
         />
       }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+      <View style={styles.titleContainer}>
+        <Text text40BO color={Colors.titleColor}>Welcome!</Text>
         <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
+      </View>
+
+      <View style={styles.stepContainer}>
+        <Text text50M color={Colors.titleColor}>To your DBT helper</Text>
+        <Text text60M color={Colors.textColor}>
+          This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.
+        </Text>
+      </View>
+
     </ParallaxScrollView>
   );
 }
@@ -59,16 +58,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    padding: 8,
   },
   stepContainer: {
     gap: 8,
-    marginBottom: 8,
+    marginBottom: 12,
+    paddingHorizontal: 12,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
+  logo: {
+    height: '110%',
+    width: '150%',
     bottom: 0,
     left: 0,
-    position: 'absolute',
+    position: 'relative',
   },
 });
