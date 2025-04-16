@@ -141,7 +141,7 @@ export default function SquareBreathingTimer() {
   // console.log(Colors.screenBG)
   return (
     <View style={[themedStyles.container, { backgroundColor: Colors.screenBG }]}>
-      <Text style={themedStyles.title}>{String(Colors.screenBG)} Square Breathing</Text>
+      <Text style={themedStyles.title}>Square Breathing</Text>
 
       <View style={themedStyles.squareContainer}>
         <Animated.View style={[themedStyles.side, themedStyles.top, getSquareStyles(0)]} />

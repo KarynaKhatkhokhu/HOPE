@@ -7,31 +7,37 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 
-Colors.loadSchemes({
+export const themes = {
   light: {
-    background: '#BCA1DC',
+    headerBackground: '#BCA1DC',
+    bodyBackground: Colors.grey80,
     titleColor: Colors.black,
     textColor: Colors.grey90,
   },
   dark: {
-    background: '#321D47',
+    headerBackground: '#321D47',
+    bodyBackground: Colors.grey10,
     titleColor: Colors.white,
     textColor: Colors.grey70,
   },
-});
+};
+
+Colors.loadSchemes(themes);
 
 export default function HomeScreen() {
   useThemeRefresh();
+  Colors.loadSchemes(themes);
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: Colors.background, dark: Colors.background }}
+      headerBackgroundColor={{ light: Colors.headerBackground, dark: Colors.headerBackground }}
       headerImage={
         <Image
           source={require('@/assets/images/purple_sun_graphic_11.png')}
           style={styles.logo}
         />
-      }>
+      }
+      bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
       <View style={styles.titleContainer}>
         <Text text40BO color={Colors.titleColor}>Welcome!</Text>
         <HelloWave />
