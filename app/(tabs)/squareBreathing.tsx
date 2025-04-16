@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  View,
   Text,
   TouchableOpacity,
   StyleSheet,
@@ -8,9 +7,10 @@ import {
   useColorScheme,
   Appearance,
 } from 'react-native';
-import { Colors } from 'react-native-ui-lib';
+import {View, Colors } from 'react-native-ui-lib';
+import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 
-Colors.loadSchemes({
+export const themes = {
   light: {
     screenBG: Colors.grey80,
     textColor: Colors.black,
@@ -25,17 +25,19 @@ Colors.loadSchemes({
     accentColor: Colors.white,
     buttonColor: Colors.black,
   },
-});
+};
 
-// const accentColor = '#000'; // Или можно сделать частью темы
+const systemColorScheme = Appearance.getColorScheme();
+Colors.setScheme(systemColorScheme);
+Colors.loadSchemes(themes);
+// console.log(systemColorScheme)
+// console.log('   ')
+// console.log(Colors.screenBG)
 
-const SquareBreathingTimer = () => {
-  const systemColorScheme = useColorScheme();
-  const currentScheme = systemColorScheme || 'light';
-
-  useEffect(() => {
-    Colors.setScheme(currentScheme);
-  }, [currentScheme]);
+export default function SquareBreathingTimer() {
+  // const currentScheme = systemColorScheme || 'light';
+  useThemeRefresh();
+  Colors.loadSchemes(themes);
 
   const [currentPhase, setCurrentPhase] = useState('Inhale');
   const [timeLeft, setTimeLeft] = useState(4);
@@ -132,11 +134,14 @@ const SquareBreathingTimer = () => {
   const displayPhase = (phase) =>
     phase === 'Hold_1' || phase === 'Hold_2' ? 'Hold' : phase;
 
-  const themedStyles = getThemedStyles(currentScheme);
+  const themedStyles = getThemedStyles(systemColorScheme);
 
+  
+  // console.log(systemColorScheme)
+  // console.log(Colors.screenBG)
   return (
-    <View style={themedStyles.container}>
-      <Text style={themedStyles.title}>Square Breathing</Text>
+    <View style={[themedStyles.container, { backgroundColor: Colors.screenBG }]}>
+      <Text style={themedStyles.title}>{String(Colors.screenBG)} Square Breathing</Text>
 
       <View style={themedStyles.squareContainer}>
         <Animated.View style={[themedStyles.side, themedStyles.top, getSquareStyles(0)]} />
@@ -174,7 +179,6 @@ const getThemedStyles = (scheme) =>
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: Colors.screenBG,
     },
     title: {
       fontSize: 28,
@@ -251,4 +255,4 @@ const getThemedStyles = (scheme) =>
     },
   });
 
-export default SquareBreathingTimer;
+
