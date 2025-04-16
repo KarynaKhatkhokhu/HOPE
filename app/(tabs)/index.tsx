@@ -22,6 +22,8 @@ export const themes = {
   },
 };
 
+const systemColorScheme = Appearance.getColorScheme();
+Colors.setScheme(systemColorScheme);
 Colors.loadSchemes(themes);
 
 export default function HomeScreen() {
