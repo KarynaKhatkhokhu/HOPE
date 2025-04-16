@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ScrollView, Appearance } from 'react-native';
 import { Card, Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
