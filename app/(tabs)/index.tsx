@@ -1,13 +1,14 @@
 import React from 'react';
-import { Image, Platform, StyleSheet, ScrollView } from 'react-native';
-import { Text, View, Colors, TouchableOpacity } from 'react-native-ui-lib';
 import { useEffect } from 'react';
-import { Appearance } from 'react-native';
+import { Image, StyleSheet, Linking, Appearance } from 'react-native';
+import { Text, View, Colors, TouchableOpacity } from 'react-native-ui-lib';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
-import { Linking } from 'react-native'
+import { useTranslation } from "react-i18next";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
+// color theme
 export const themes = {
   light: {
     headerBackground: '#BCA1DC',
@@ -27,9 +28,33 @@ const systemColorScheme = Appearance.getColorScheme();
 Colors.setScheme(systemColorScheme);
 Colors.loadSchemes(themes);
 
+// language
+
+
 export default function HomeScreen() {
+  const { i18n, t } = useTranslation();
+  const currentLanguage = i18n.language;
+
+
   useThemeRefresh();
   Colors.loadSchemes(themes);
+
+  useEffect(() => {
+    const loadLanguage = async () => {
+      const savedLanguage = await AsyncStorage.getItem("language");
+      if (savedLanguage) {
+        i18n.changeLanguage(savedLanguage);
+      }
+    };
+    loadLanguage();
+  }, [i18n]);
+
+  const changeLanguage = async (lang: string) => {
+    await AsyncStorage.setItem("language", lang);
+    i18n.changeLanguage(lang);
+  };
+
+  console.log("current language", currentLanguage)
 
   return (
     <ParallaxScrollView
@@ -43,14 +68,14 @@ export default function HomeScreen() {
       bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
       <View style={styles.contentContainer}>
         <View style={styles.titleContainer}>
-          <Text text40BO color={Colors.titleColor}>Welcome!</Text>
+          <Text text40BO color={Colors.titleColor}>{t("index.welcome")}</Text>
           <HelloWave />
         </View>
 
         <View style={styles.stepContainer}>
-          <Text text50M color={Colors.titleColor}>To your DBT helper</Text>
+          <Text text50M color={Colors.titleColor}>{t("index.welcome_to")}</Text>
           <Text text60M color={Colors.textColor}>
-            This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.
+            {t("index.intro")}
           </Text>
         </View>
 
