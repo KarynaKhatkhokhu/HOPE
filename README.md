@@ -19,7 +19,7 @@ by [ZeBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [Restle
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
 - [ ] potentially: Paired Muscle Relaxation do-along screen
- 
+
 
 ### Technical Debt / Refactoring Tasks
 
@@ -27,4 +27,3 @@ by [ZeBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [Restle
 - [ ] extract color scheme in separate files, clean up and normalise loadSchemes
 - [ ] normalize components (as functions)
 - [ ] cleanup unused components
-- [ ] 
