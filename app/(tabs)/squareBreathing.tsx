@@ -32,8 +32,7 @@ Colors.setScheme(systemColorScheme);
 Colors.loadSchemes(themes);
 
 export default function SquareBreathingTimer() {
-  // const currentScheme = systemColorScheme || 'light';
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
   useThemeRefresh();
   Colors.loadSchemes(themes);
 
@@ -139,16 +138,9 @@ export default function SquareBreathingTimer() {
         return t('square_breathing.exhale')
       }
     };
-    // phase === 'Hold_1' || phase === 'Hold_2' ? t('square_breathing.hold') : {
-    //   phase === 'Inhale' ? t('square_breathing.hold') : t('square_breathing.hold');
-    //   }
-    // };
 
   const themedStyles = getThemedStyles(systemColorScheme);
 
-  
-  // console.log(systemColorScheme)
-  // console.log(Colors.screenBG)
   return (
     <View style={[themedStyles.container, { backgroundColor: Colors.screenBG }]}>
       <Text style={themedStyles.title}>{t('square_breathing.title')}</Text>
