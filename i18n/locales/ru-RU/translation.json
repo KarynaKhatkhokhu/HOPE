@@ -11,6 +11,7 @@
         "inhale": "Вдох",
         "hold": "Держим",
         "exhale": "Выдох",
-        "seconds": "с"
+        "seconds": "с",
+        "pause": "Пауза"
     }
 }
