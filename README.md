@@ -15,6 +15,7 @@ by [ZeBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [Restle
 
 ## TODO
 
+- [ ] *proofread the translated text*
 - [ ] add zeBrain Logo
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
