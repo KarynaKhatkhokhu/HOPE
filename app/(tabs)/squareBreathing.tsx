@@ -4,11 +4,11 @@ import {
   TouchableOpacity,
   StyleSheet,
   Animated,
-  useColorScheme,
   Appearance,
 } from 'react-native';
 import {View, Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
+import { useTranslation } from "react-i18next";
 
 export const themes = {
   light: {
@@ -30,12 +30,10 @@ export const themes = {
 const systemColorScheme = Appearance.getColorScheme();
 Colors.setScheme(systemColorScheme);
 Colors.loadSchemes(themes);
-// console.log(systemColorScheme)
-// console.log('   ')
-// console.log(Colors.screenBG)
 
 export default function SquareBreathingTimer() {
   // const currentScheme = systemColorScheme || 'light';
+  const { i18n, t } = useTranslation();
   useThemeRefresh();
   Colors.loadSchemes(themes);
 
@@ -132,7 +130,19 @@ export default function SquareBreathingTimer() {
   };
 
   const displayPhase = (phase) =>
-    phase === 'Hold_1' || phase === 'Hold_2' ? 'Hold' : phase;
+    {
+      if (phase === 'Hold_1' || phase === 'Hold_2') {
+        return t('square_breathing.hold')
+      } else if (phase === 'Inhale') {
+        return t('square_breathing.inhale')
+      } else {
+        return t('square_breathing.exhale')
+      }
+    };
+    // phase === 'Hold_1' || phase === 'Hold_2' ? t('square_breathing.hold') : {
+    //   phase === 'Inhale' ? t('square_breathing.hold') : t('square_breathing.hold');
+    //   }
+    // };
 
   const themedStyles = getThemedStyles(systemColorScheme);
 
@@ -141,7 +151,7 @@ export default function SquareBreathingTimer() {
   // console.log(Colors.screenBG)
   return (
     <View style={[themedStyles.container, { backgroundColor: Colors.screenBG }]}>
-      <Text style={themedStyles.title}>Square Breathing</Text>
+      <Text style={themedStyles.title}>{t('square_breathing.title')}</Text>
 
       <View style={themedStyles.squareContainer}>
         <Animated.View style={[themedStyles.side, themedStyles.top, getSquareStyles(0)]} />
@@ -152,21 +162,21 @@ export default function SquareBreathingTimer() {
 
       <View style={themedStyles.timerContainer}>
         <Text style={themedStyles.phase}>{displayPhase(currentPhase)}</Text>
-        <Text style={themedStyles.time}>{timeLeft}s</Text>
+        <Text style={themedStyles.time}>{timeLeft}{t('square_breathing.seconds')}</Text>
       </View>
 
       <View style={themedStyles.controls}>
         {!isRunning ? (
           <TouchableOpacity onPress={startTimer} style={themedStyles.button}>
-            <Text style={themedStyles.buttonText}>Start</Text>
+            <Text style={themedStyles.buttonText}>{t('square_breathing.start')}</Text>
           </TouchableOpacity>
         ) : (
           <TouchableOpacity onPress={pauseTimer} style={themedStyles.button}>
-            <Text style={themedStyles.buttonText}>Pause</Text>
+            <Text style={themedStyles.buttonText}>{t('square_breathing.pause')}</Text>
           </TouchableOpacity>
         )}
         <TouchableOpacity onPress={resetTimer} style={themedStyles.button}>
-          <Text style={themedStyles.buttonText}>Reset</Text>
+          <Text style={themedStyles.buttonText}>{t('square_breathing.restart')}</Text>
         </TouchableOpacity>
       </View>
     </View>
