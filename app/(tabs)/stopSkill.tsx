@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, Appearance } from 'react-native';
 import { Card, Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
-import cardData from '../../assets/texts/stopCardTexts.json'; 
+import { useTranslation } from "react-i18next";
 
 
 Colors.loadSchemes({
@@ -58,11 +58,22 @@ const ImageCard = ({cardText, cardImage, cardTitle}) => {
 export default function StopSkill() {
   useThemeRefresh();
   
+  const { t } = useTranslation();
+  const cardKeys = ['stop', 'step', 'obsrv', 'pm'];
+
   return (
     <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenBG}}>
-      {cardData.map((item, index) => (
-        <ImageCard key={index} cardImage={getImage(item.image)} cardText={item.text} cardTitle={item.title}/>
-      ))}
+      {cardKeys.map((key, index) => {
+        const card = t(`stop.${key}`, { returnObjects: true });
+        return (
+          <ImageCard
+            key={index}
+            cardImage={getImage(card.image)}
+            cardText={card.text}
+            cardTitle={card.title}
+          />
+        );
+      })}
     </ScrollView>
   )
 };

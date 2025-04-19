@@ -32,29 +32,11 @@ Colors.loadSchemes(themes);
 
 
 export default function HomeScreen() {
-  const { i18n, t } = useTranslation();
-  const currentLanguage = i18n.language;
+  const { t } = useTranslation();
 
 
   useThemeRefresh();
   Colors.loadSchemes(themes);
-
-  useEffect(() => {
-    const loadLanguage = async () => {
-      const savedLanguage = await AsyncStorage.getItem("language");
-      if (savedLanguage) {
-        i18n.changeLanguage(savedLanguage);
-      }
-    };
-    loadLanguage();
-  }, [i18n]);
-
-  const changeLanguage = async (lang: string) => {
-    await AsyncStorage.setItem("language", lang);
-    i18n.changeLanguage(lang);
-  };
-
-  console.log("current language", currentLanguage)
 
   return (
     <ParallaxScrollView
