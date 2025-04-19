@@ -162,7 +162,7 @@ export default function SquareBreathingTimer() {
 
       <View style={themedStyles.timerContainer}>
         <Text style={themedStyles.phase}>{displayPhase(currentPhase)}</Text>
-        <Text style={themedStyles.time}>{timeLeft}{t('square_breathing.seconds')}</Text>
+        <Text style={themedStyles.time}>{timeLeft}</Text>
       </View>
 
       <View style={themedStyles.controls}>
@@ -176,7 +176,7 @@ export default function SquareBreathingTimer() {
           </TouchableOpacity>
         )}
         <TouchableOpacity onPress={resetTimer} style={themedStyles.button}>
-          <Text style={themedStyles.buttonText}>{t('square_breathing.restart')}</Text>
+          <Text style={themedStyles.buttonText}>{t('square_breathing.stop')}</Text>
         </TouchableOpacity>
       </View>
     </View>

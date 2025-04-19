@@ -7,7 +7,7 @@
     "square_breathing": {
         "title": "Дыхание Квадратом",
         "start": "Начать",
-        "restart": "Заново",
+        "stop": "Стоп",
         "inhale": "Вдох",
         "hold": "Держим",
         "exhale": "Выдох",

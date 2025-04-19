@@ -7,7 +7,7 @@
     "square_breathing": {
         "title": "Square Breathing",
         "start": "Start",
-        "restart": "Restart",
+        "stop": "Stop",
         "inhale": "Inhale",
         "hold": "Hold",
         "exhale": "Exhale",
