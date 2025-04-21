@@ -4,6 +4,14 @@ That will hopefully be usefull to you. These DBT tools are meant to help with pa
 
 by [AveBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [RestlessSun](https://github.com/KarynaKhatkhokhu)
 
+# TECHSTACK
+
+- React Native
+- Expo / Metro
+- RNULIB
+- Inkscape
+- Marsha M. Linehan's Work
+
 # DEV LOG
 
 ## DONE
