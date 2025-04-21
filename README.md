@@ -16,7 +16,7 @@ by [AveBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [Restl
 ## TODO
 
 - [ ] *proofread the translated text*
-- [ ] add AveBrain Logo
+- [x] add AveBrain Logo
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
 - [ ] potentially: Paired Muscle Relaxation do-along screen
