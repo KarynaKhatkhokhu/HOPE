@@ -66,7 +66,7 @@ export default function HomeScreen() {
             <Text>(c) </Text>
             <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/')}>
               <Text style={{color: Colors.blue70}}>
-                ZeBrain
+                AveBrain
               </Text>
             </TouchableOpacity>
             <Text>&</Text>

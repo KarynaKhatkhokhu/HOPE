@@ -2,7 +2,7 @@
 
 That will hopefully be usefull to you. These DBT tools are meant to help with panic attacks, suicidal ideations, emotional flashbacks, and other episodes. They were originally developed by Marsha M. Linehan to help BPD patients, but since proven usefull for many others.
 
-by [ZeBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [RestlessSun](https://github.com/KarynaKhatkhokhu)
+by [AveBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [RestlessSun](https://github.com/KarynaKhatkhokhu)
 
 # DEV LOG
 
@@ -16,7 +16,7 @@ by [ZeBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [Restle
 ## TODO
 
 - [ ] *proofread the translated text*
-- [ ] add zeBrain Logo
+- [ ] add AveBrain Logo
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
 - [ ] potentially: Paired Muscle Relaxation do-along screen
