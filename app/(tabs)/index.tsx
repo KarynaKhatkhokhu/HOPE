@@ -43,7 +43,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: Colors.headerBackground, dark: Colors.headerBackground }}
       headerImage={
         <Image
-          source={require('@/assets/images/sun_graphic_1.png')}
+          source={require('@/assets/images/brainNsun_50_transparent.png')}
           style={styles.logo}
         />
       }
