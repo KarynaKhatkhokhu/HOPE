@@ -33,6 +33,7 @@ by [AveBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [Restl
 ### Technical Debt / Refactoring Tasks
 
 - [ ] cleanup Square Breathing animation
+- [ ] optimise asset size
 - [ ] extract color scheme in separate files, clean up and normalise loadSchemes
 - [ ] normalize components (as functions)
 - [ ] cleanup unused components
