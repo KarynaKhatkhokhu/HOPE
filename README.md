@@ -10,11 +10,12 @@ Supported language: RU·UA·EN
 
 # DEMO
 
-![alt text](demo-3.png)
-![alt text](demo-4.png)
+<img src="demo-3.png " width="250">
+<img src="demo-4.png " width="250">
+
 ---
-![alt text](demo-1.png)
-![alt text](demo-2.png)
+<img src="demo-1.png " width="250">
+<img src="demo-2.png " width="250">
 
 
 
