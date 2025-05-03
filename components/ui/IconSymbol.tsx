@@ -17,7 +17,8 @@ const MAPPING = {
   'chevron.right': { library: MaterialIcons, name: 'chevron-right' },
   'square': { library: MaterialIcons, name: 'square' },
   'STOP': { library: Feather, name: 'octagon' },
-  'cold': { library: MaterialCommunityIcons, name: 'thermometer-low' } 
+  'cold': { library: MaterialCommunityIcons, name: 'thermometer-low' },
+  'PMR': { library: MaterialCommunityIcons, name: 'meditation' }
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

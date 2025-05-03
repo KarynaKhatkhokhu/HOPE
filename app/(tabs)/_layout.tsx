@@ -41,6 +41,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="PMR"
+        options={{
+          title: 'PMR',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="PMR" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="tippSkill"
         options={{
           title: 'TIPP',
