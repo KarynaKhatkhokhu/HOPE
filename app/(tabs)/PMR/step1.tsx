@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 import ResetButton from '../../../components/ResetButton';
 import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
+import BreathingCircle from '../../../components/BreathingCircle';
 
 Colors.loadSchemes({
   light: {
@@ -35,10 +36,11 @@ export default function PMRStep1() {
       <ResetButton/>
 
       <View style={{ alignItems: 'center', marginBottom: 32 }}>
-        <Image 
+        {/* <Image 
           source={require('../../../assets/images/adaptive-icon.png')} // 🔁 Replace with your actual image path
           style={{ width: 200, height: 200, resizeMode: 'contain' }}
-        />
+        /> */}
+        <BreathingCircle />
       </View>
 
       <Text text60 color={Colors.textColor} style={{ marginBottom: 16, textAlign: 'center' }}>
