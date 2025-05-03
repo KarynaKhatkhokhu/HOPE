@@ -7,6 +7,7 @@ import { useRouter } from 'expo-router';
 import ResetButton from '../../../components/ResetButton';
 import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
 import BreathingCircle from '../../../components/BreathingCircle';
+import { IconSymbol } from '../../../components/ui/IconSymbol';
 
 export const themes = {
   light: {
@@ -42,7 +43,11 @@ export default function PMRStep1() {
           source={require('../../../assets/images/adaptive-icon.png')} // 🔁 Replace with your actual image path
           style={{ width: 200, height: 200, resizeMode: 'contain' }}
         /> */}
-        <BreathingCircle centerImage={require('../../../assets/images/favicon.png')}/>
+        <BreathingCircle
+            centerIcon={
+                <IconSymbol name="PMR" size={32} color="#333" />
+            }
+        />
       </View>
 
       <Text text60 color={Colors.textColor} style={{ marginBottom: 16, textAlign: 'center' }}>

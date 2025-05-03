@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Image } from 'react-native';
+import { Animated, View, StyleSheet } from 'react-native';
 
-export default function BreathingCircle({centerImage}) {
+export default function BreathingCircle({ centerIcon }: { centerIcon: React.ReactNode }) {
   const scaleAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
@@ -36,10 +36,9 @@ export default function BreathingCircle({centerImage}) {
             },
           ]}
         />
-        <Image
-          source={centerImage} // Replace with your actual PNG path
-          style={styles.overlayIcon}
-        />
+        <View style={styles.overlayIcon}>
+          {centerIcon}
+        </View>
       </View>
     </View>
   );
@@ -66,8 +65,7 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   },
   overlayIcon: {
-    width: 32,
-    height: 32,
-    resizeMode: 'contain',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
