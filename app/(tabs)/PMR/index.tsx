@@ -5,7 +5,7 @@ import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 
-Colors.loadSchemes({
+export const themes = {
   light: {
     screenBG: Colors.grey80,
     cardBG: Colors.grey80,
@@ -20,20 +20,22 @@ Colors.loadSchemes({
     myButtonColor: Colors.black,
     myButtonTextColor: Colors.white
   },
-});
+};
 
 const systemColorScheme = Appearance.getColorScheme();
 Colors.setScheme(systemColorScheme);
+Colors.loadSchemes(themes);
 
 export default function PMRIntro() {
   useThemeRefresh();
+  Colors.loadSchemes(themes);
   
   const { t } = useTranslation();
   const router = useRouter();
 
   return (
     <ScrollView 
-      style={{ backgroundColor: Colors.screenBG }} 
+      style={{ backgroundColor: Colors.grey10 }} 
       contentContainerStyle={{ padding: 24, justifyContent: 'center', flexGrow: 1 }}
     >
       <View style={{ marginBottom: 32 }}>

@@ -6,24 +6,27 @@ import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 import ResetButton from '../../../components/ResetButton';
 import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
+import BreathingCircle from '../../../components/BreathingCircle';
 
-Colors.loadSchemes({
+export const themes = {
   light: {
-    screenBG: Colors.white,
+    screenBG: Colors.grey80,
     textColor: Colors.black,
   },
   dark: {
-    screenBG: Colors.black,
+    screenBG: Colors.grey10,
     textColor: Colors.white,
   },
-});
+};
 
 const systemColorScheme = Appearance.getColorScheme();
 Colors.setScheme(systemColorScheme);
+Colors.loadSchemes(themes);
 
-export default function PMRStep2() {
+export default function PMRStep1() {
   useThemeRefresh();
-
+  Colors.loadSchemes(themes);
+  
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -35,10 +38,11 @@ export default function PMRStep2() {
       <ResetButton/>
 
       <View style={{ alignItems: 'center', marginBottom: 32 }}>
-        <Image 
+        {/* <Image 
           source={require('../../../assets/images/adaptive-icon.png')} // 🔁 Replace with your actual image path
           style={{ width: 200, height: 200, resizeMode: 'contain' }}
-        />
+        /> */}
+        <BreathingCircle centerImage={require('../../../assets/images/favicon.png')}/>
       </View>
 
       <Text text60 color={Colors.textColor} style={{ marginBottom: 16, textAlign: 'center' }}>
@@ -49,7 +53,7 @@ export default function PMRStep2() {
         Now breathe out and release all tension. Let your muscles go soft.
       </Text>
 
-      <BackNextNavigationButtons nextPageRoute="/PMR/step3"/>
+      <BackNextNavigationButtons nextPageRoute="/PMR/step2"/>
 
     </ScrollView>
   );

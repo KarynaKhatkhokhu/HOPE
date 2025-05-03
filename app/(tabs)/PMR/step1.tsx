@@ -8,23 +8,25 @@ import ResetButton from '../../../components/ResetButton';
 import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
 import BreathingCircle from '../../../components/BreathingCircle';
 
-Colors.loadSchemes({
+export const themes = {
   light: {
-    screenBG: Colors.white,
+    screenBG: Colors.grey80,
     textColor: Colors.black,
   },
   dark: {
-    screenBG: Colors.black,
+    screenBG: Colors.grey10,
     textColor: Colors.white,
   },
-});
+};
 
 const systemColorScheme = Appearance.getColorScheme();
 Colors.setScheme(systemColorScheme);
+Colors.loadSchemes(themes);
 
 export default function PMRStep1() {
   useThemeRefresh();
-
+  Colors.loadSchemes(themes);
+  
   const { t } = useTranslation();
   const router = useRouter();
 
