@@ -40,7 +40,7 @@ export default function PMRStep1() {
           source={require('../../../assets/images/adaptive-icon.png')} // 🔁 Replace with your actual image path
           style={{ width: 200, height: 200, resizeMode: 'contain' }}
         /> */}
-        <BreathingCircle />
+        <BreathingCircle centerImage={require('../../../assets/images/favicon.png')}/>
       </View>
 
       <Text text60 color={Colors.textColor} style={{ marginBottom: 16, textAlign: 'center' }}>
