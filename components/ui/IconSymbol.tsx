@@ -19,10 +19,11 @@ const MAPPING = {
   'STOP': { library: Feather, name: 'octagon' },
   'cold': { library: MaterialCommunityIcons, name: 'thermometer-low' },
   'PMR': { library: MaterialCommunityIcons, name: 'meditation' },
-  'PMR_arms': { library: MaterialCommunityIcons, name: 'meditation' },
-  'PMR_legs': { library: MaterialCommunityIcons, name: 'meditation' },
-  'PMR_shoulders': { library: MaterialCommunityIcons, name: 'meditation' },
-  'PMR_face': { library: MaterialCommunityIcons, name: 'meditation' }
+  'PMR_arms': { library: MaterialCommunityIcons, name: 'arm-flex' },
+  'PMR_legs': { library: MaterialCommunityIcons, name: 'seat-legroom-reduced' },
+  'PMR_shoulders': { library: MaterialCommunityIcons, name: 'account' },
+  'PMR_face': { library: MaterialCommunityIcons, name: 'baby-face-outline' },
+  'settings': { library: MaterialIcons, name: 'settings' }
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

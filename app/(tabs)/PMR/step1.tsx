@@ -45,7 +45,7 @@ export default function PMRStep1() {
         /> */}
         <BreathingCircle
             centerIcon={
-                <IconSymbol name="PMR" size={32} color="#333" />
+                <IconSymbol name="PMR_arms" size={32} color="#333" />
             }
         />
       </View>
@@ -59,7 +59,30 @@ export default function PMRStep1() {
       </Text>
 
       <BackNextNavigationButtons nextPageRoute="/PMR/step2"/>
+      <Text text70 style={{ marginBottom: 24, textAlign: 'center' }}>
+    In each step, you’ll tense a muscle group, hold, then release as you breathe out. 
+    Watch the circle animation to guide your breath and body.
+  </Text>
 
+      <Text text70 style={{ marginBottom: 16, textAlign: 'center' }}>
+    You can also use a quiet affirmation with each exhale—something real that reminds you you're safe and capable.
+  </Text>
+            <Button 
+              label="Tip: Affirmations"
+              size={Button.sizes.large}
+              backgroundColor={Colors.myButtonColor}
+              color={Colors.textColor}
+              outline={true}
+              outlineColor={Colors.textColor}
+              />
+              <Button 
+              label="Tip: Affirmations"
+              size={Button.sizes.large}
+              backgroundColor={Colors.myButtonColor}
+              color={Colors.textColor}
+              outline={true}
+              outlineColor={Colors.textColor}
+              />
     </ScrollView>
   );
 }
