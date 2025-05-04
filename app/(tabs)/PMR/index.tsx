@@ -85,7 +85,6 @@ export default function PMRIntro() {
         outlineColor={Colors.textColor}
         style={{marginVertical: 10}}
         onPress={() => setModalVisible(true)}
-        // onPress={() => console.log('sss'+t('EffectiveRethenking.imageName'))}
       />
       <EffectiveRethinkingModal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </ScrollView>
