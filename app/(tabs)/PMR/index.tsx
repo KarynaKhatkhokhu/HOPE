@@ -71,6 +71,16 @@ export default function PMRIntro() {
         backgroundColor={Colors.myButtonColor || Colors.grey60}
         color={Colors.textColor}
       />
+
+      <Button 
+        label="Tip: Effective Rethinking"
+        size={Button.sizes.large}
+        backgroundColor={Colors.myButtonColor}
+        color={Colors.textColor}
+        outline={true}
+        outlineColor={Colors.textColor}
+        style={{marginVertical: 10}}
+      />
     </ScrollView>
   );
 }
