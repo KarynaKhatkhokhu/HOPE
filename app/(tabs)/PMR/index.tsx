@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView, Appearance } from 'react-native';
 import { View, Button, Colors, Text, Image } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
+import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 
@@ -33,12 +34,15 @@ export default function PMRIntro() {
   const { t } = useTranslation();
   const router = useRouter();
 
+  const [modalVisible, setModalVisible] = useState(false);
+  // [tipERVisible] = useState()
+
   return (
     <ScrollView 
       style={{ backgroundColor: Colors.grey10 }} 
       contentContainerStyle={{ padding: 24, justifyContent: 'center', flexGrow: 1 }}
     >
-      <View style={{ marginBottom: 32 }}>
+      <View style={{ marginBottom: 0 }}>
         <Text text50 color={Colors.textColor} style={{ fontWeight: 'bold', marginBottom: 16 }}>
           Progressive Muscle Relaxation
         </Text>
@@ -80,7 +84,10 @@ export default function PMRIntro() {
         outline={true}
         outlineColor={Colors.textColor}
         style={{marginVertical: 10}}
+        onPress={() => setModalVisible(true)}
+        // onPress={() => console.log('sss'+t('EffectiveRethenking.imageName'))}
       />
+      <EffectiveRethinkingModal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </ScrollView>
   );
 }
