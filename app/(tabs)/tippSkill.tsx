@@ -36,6 +36,7 @@ export default function TippSkill() {
               cardText={card.text}
               cardTitle={card.title}
               cardBGColor={Colors.cardBG}
+              cardTextColor={Colors.textColor}
             />
           );
         })}

@@ -37,6 +37,7 @@ export default function StopSkill() {
             cardText={card.text}
             cardTitle={card.title}
             cardBGColor={Colors.cardBG}
+            cardTextColor={Colors.textColor}
           />
         );
       })}

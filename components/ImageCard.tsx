@@ -1,6 +1,6 @@
-import { Card, Colors } from 'react-native-ui-lib';
+import { Card } from 'react-native-ui-lib';
 
-export default function ImageCard({cardText, cardImage, cardTitle, cardBGColor}) {
+export default function ImageCard({cardText, cardImage, cardTitle, cardBGColor, cardTextColor}) {
     return (
       <Card  width={'98%'} onPress={() => console.log('pressed')} enableShadow={true} row={true}
        padding={true}
@@ -14,8 +14,8 @@ export default function ImageCard({cardText, cardImage, cardTitle, cardBGColor})
         />
         <Card.Section
         content={[
-          {text: cardTitle, textBreakStrategy: 'highQuality', text60: true, grey10: true, padding: 4, color: Colors.textColor},
-          {text: cardText, textBreakStrategy: 'highQuality', text70: true, grey10: true, padding: 4, color: Colors.textColor}
+          {text: cardTitle, textBreakStrategy: 'highQuality', text60: true, grey10: true, padding: 4, color: cardTextColor},
+          {text: cardText, textBreakStrategy: 'highQuality', text70: true, grey10: true, padding: 4, color: cardTextColor}
         ]}
         contentStyle={{alignItems: 'flex-start', marginRight: 150}}
         />
