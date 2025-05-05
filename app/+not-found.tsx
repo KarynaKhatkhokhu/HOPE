@@ -18,8 +18,8 @@ export default function NotFoundScreen() {
       <Stack.Screen options={{ title: 'Oops!' }} />
       <View backgroundColor={Colors.cardBG} style={styles.container}>
         <Text text60 style={{color: Colors.textColor}}>This screen doesn't exist.</Text>
-        <Link href="/" asChild>
-        <TouchableOpacity style={{margin: 10}} onPress={() => router.replace('/(tabs)')}
+        <Link href="/" asChild style={{margin: 10}} >
+        <TouchableOpacity onPress={() => router.replace('/(tabs)')}
           hitSlop={{ top: 10, bottom: 50, left: 10, right: 10 }}>
             <Text text30BO color={Colors.textAccentBlue}>
               Go to home screen!
