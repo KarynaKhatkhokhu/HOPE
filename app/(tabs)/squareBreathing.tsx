@@ -6,17 +6,18 @@ import {
   Animated,
   Appearance,
 } from 'react-native';
-import { View, Colors, SchemeType } from 'react-native-ui-lib';
+import { View, Colors } from 'react-native-ui-lib';
 // themes
 import { Themes } from '@/constants/Theme'
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 // language
 import { useTranslation } from "react-i18next";
 
+Colors.loadSchemes(Themes);
+
 export default function SquareBreathingTimer() {
   const { t } = useTranslation();
   useThemeRefresh();
-  const systemColorScheme = Appearance.getColorScheme();
   Colors.loadSchemes(Themes);
 
   const [currentPhase, setCurrentPhase] = useState('Inhale');
