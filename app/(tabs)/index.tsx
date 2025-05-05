@@ -40,21 +40,22 @@ export default function HomeScreen() {
           </Text>
         </View>
 
-        <View style={styles.footer}>
-          <View style={styles.inlineText}>
-            <Text style={{color: Colors.textColor}}>© </Text>
-            <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/')}>
-              <Text style={{color: Colors.textAccentBlue}}>
-                ZeBrain
-              </Text>
-            </TouchableOpacity>
-            <Text style={{color: Colors.textColor}}>&</Text>
-            <TouchableOpacity onPress={() => Linking.openURL('https://github.com/KarynaKhatkhokhu')}>
-              <Text style={{color: Colors.textAccentPurple}}>
-                RestlessSun
-              </Text>
-            </TouchableOpacity>
-          </View>
+    <View style={styles.footer}>
+        <View style={styles.inlineText}>
+          <Text style={{ color: Colors.textColor }}>© 2025 </Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/')}>
+            <Text style={{ color: Colors.textAccentBlue }}>
+              ZeBrain
+            </Text>
+          </TouchableOpacity>
+          <Text style={{ color: Colors.textColor }}> & </Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://github.com/KarynaKhatkhokhu')}>
+            <Text style={{ color: Colors.textAccentPurple }}>
+              RestlessSun
+            </Text>
+          </TouchableOpacity>
+          <Text style={{ color: Colors.textColor }}>, MIT Licensed</Text>
+        </View>
         </View>
       </View>
 
