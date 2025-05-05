@@ -1,46 +1,25 @@
 import React from 'react';
-import { useEffect } from 'react';
+// ui components
 import { Image, StyleSheet, Linking, Appearance } from 'react-native';
-import { Text, View, Colors, TouchableOpacity } from 'react-native-ui-lib';
+import { Text, View, Colors, TouchableOpacity, SchemeType } from 'react-native-ui-lib';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+// color themes
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
+import { Themes } from '@/constants/Theme'
+// translation
 import { useTranslation } from "react-i18next";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
-// color theme
-export const themes = {
-  light: {
-    headerBackground: '#BCA1DC',
-    bodyBackground: Colors.grey80,
-    titleColor: Colors.black,
-    textColor: Colors.grey90,
-  },
-  dark: {
-    headerBackground: '#321D47',
-    bodyBackground: Colors.grey10,
-    titleColor: Colors.white,
-    textColor: Colors.grey70,
-  },
-};
-
-const systemColorScheme = Appearance.getColorScheme();
-Colors.setScheme(systemColorScheme);
-Colors.loadSchemes(themes);
-
-// language
-
 
 export default function HomeScreen() {
   const { t } = useTranslation();
 
-
   useThemeRefresh();
-  Colors.loadSchemes(themes);
+  Colors.loadSchemes(Themes);
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: Colors.headerBackground, dark: Colors.headerBackground }}
+      headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
       headerImage={
         <Image
           source={require('@/assets/images/sun_graphic_1.png')}
@@ -63,15 +42,15 @@ export default function HomeScreen() {
 
         <View style={styles.footer}>
           <View style={styles.inlineText}>
-            <Text>(c) </Text>
+            <Text style={{color: Colors.textColor}}>© </Text>
             <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/')}>
-              <Text style={{color: Colors.blue70}}>
+              <Text style={{color: Colors.textAccentBlue}}>
                 ZeBrain
               </Text>
             </TouchableOpacity>
-            <Text>&</Text>
+            <Text style={{color: Colors.textColor}}>&</Text>
             <TouchableOpacity onPress={() => Linking.openURL('https://github.com/KarynaKhatkhokhu')}>
-              <Text style={{color: Colors.purple70}}>
+              <Text style={{color: Colors.textAccentPurple}}>
                 RestlessSun
               </Text>
             </TouchableOpacity>
