@@ -1,61 +1,19 @@
 {
-    "index": {
-        "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks,, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",
-        "welcome": "Welcome!",
-        "welcome_to": "To your DBT helper:"
-    },
-    "square_breathing": {
-        "title": "Square Breathing",
-        "start": "Start",
-        "stop": "Stop",
-        "inhale": "Inhale",
-        "hold": "Hold",
-        "exhale": "Exhale",
-        "seconds": "s",
-        "pause": "Pause"
-    },
-    "tipp": {
-        "temp": {
-            "title": "TEMPERATURE",
-            "text": "Change your body TEMPERATURE. Splash your face with cold water, hold an ice cube, let car AC blow on your face, take a cold shower.",
-            "image": "letter_T.png"
-        },
-        "exc": {
-            "title": "INTENSE EXERCISE",
-            "text": "Do INTENSE exercise to match your intense emotion. Sprint to the end of the street, do jumping jacks, push ups, intense dancing.",
-            "image": "letter_I.png"
-        },
-        "breath": {
-            "title": "PACED BREATHING",
-            "text": "Try Box Breathing: Breathe in for 4 seconds, hold it for 4 seconds, breathe out 4, and hold 4. Start again, and continue until you feel more calm.",
-            "image": "letter_P.png"
-        },
-        "pmr": {
-            "title": "PAIRED MUSCLE RELAXATION",
-            "text": "Focus on 1 muscle group at a time. Tighten your muscles as much as possible for 5 seconds. Then release & relax. Repeat with other muscle groups.",
-            "image": "letter_P.png"
-        }
-    },
-    "stop": {
-        "stop": {
-            "title": "STOP",
-            "text": "Do not just react. Stop! Freeze! Do not move a muscle! Your emotions may try to make you act without thinking. Stay in control!",
-            "image": "letter_S.png"
-        },
-        "step": {
-            "title": "TAKE A STEP BACK",
-            "text": "Take a step back from the situation. Take a break. Let go. Take a deep breath. Do not let your feelings make you act impulsively.",
-            "image": "letter_T.png"
-        },
-        "obsrv": {
-            "title": "OBSERVE",
-            "text": "Notice what is going on inside and outside you. What is the situation? What are your thoughts and feelings? What are others saying or doing?",
-            "image": "letter_O.png"
-        },
-        "pm": {
-            "title": "PROCEED MINDFULLY",
-            "text": "Act with awareness. In deciding what to do, consider your thoughts and feelings, the situation, and other people's thoughts and feelings. Think about your goals. Ask Wise Mind: Which actions will make it better or worse?",
-            "image": "letter_P.png"
-        }
-    }
+  "effective_rthinking": {
+    "title": "__STRING_NOT_TRANSLATED__"
+  },
+  "index": {
+    "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",
+    "welcome": "Welcome!",
+    "welcome_to": "To your DBT helper"
+  },
+  "square_breathing": {
+    "exhale": "Exhale",
+    "hold": "Hold",
+    "inhale": "Inhale",
+    "pause": "Pause",
+    "start": "Start",
+    "stop": "Stop",
+    "title": "Square Breathing"
+  }
 }

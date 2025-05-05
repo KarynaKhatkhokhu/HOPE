@@ -8,7 +8,6 @@ import translationUa from "./locales/uk-UA/translation.json";
 
 const resources = {
   "uk-UA": { translation: translationUa },
-  "ru-UA": { translation: translationRu },
   "ru-RU": { translation: translationRu },
   "en-US": { translation: translationEn },
 };
@@ -17,8 +16,15 @@ const initI18n = async () => {
   let savedLanguage = await AsyncStorage.getItem("language");
 
   if (!savedLanguage) {
-    savedLanguage = Localization.locale;
-  }
+    const locale = Localization.locale;
+    if (locale.startsWith("ru")) {
+      savedLanguage = "ru-RU";
+    } else if (locale.startsWith("uk")) {
+      savedLanguage = "uk-UA";
+    } else {
+      savedLanguage = "en-US";
+    }
+  }  
 
   i18n.use(initReactI18next).init({
     compatibilityJSON: "v3",

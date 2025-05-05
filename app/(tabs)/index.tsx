@@ -22,7 +22,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
       headerImage={
         <Image
-          source={require('@/assets/images/sun_graphic_1.png')}
+          source={require('@/assets/images/brainNsun_50_transparent.png')}
           style={styles.logo}
         />
       }
@@ -45,7 +45,7 @@ export default function HomeScreen() {
         <Text style={{ color: Colors.textColor }}>© 2025 </Text>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/')}>
           <Text style={{ color: Colors.textAccentBlue }}>
-            ZeBrain
+            AveBrain
           </Text>
         </TouchableOpacity>
         <Text style={{ color: Colors.textColor }}> & </Text>
