@@ -36,6 +36,7 @@ export default function StopSkill() {
             cardImage={getImage(card.image)}
             cardText={card.text}
             cardTitle={card.title}
+            cardBGColor={Colors.cardBG}
           />
         );
       })}
