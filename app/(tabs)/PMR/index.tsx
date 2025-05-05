@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ScrollView, Appearance } from 'react-native';
-import { View, Button, Colors, Text, Image } from 'react-native-ui-lib';
+import { View, Button, Colors, Text, Image, SchemeType } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
 import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ export const themes = {
 };
 
 const systemColorScheme = Appearance.getColorScheme();
-Colors.setScheme(systemColorScheme);
+Colors.setScheme(systemColorScheme as SchemeType);
 Colors.loadSchemes(themes);
 
 export default function PMRIntro() {
