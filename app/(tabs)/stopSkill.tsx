@@ -9,7 +9,7 @@ import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
 
-const getImage = (imageName: String) => {
+const getImage = (imageName) => {
   const images = {
     "letter_S.png": require('../../assets/images/letters/letter_S.png'),
     "letter_T.png": require('../../assets/images/letters/letter_T.png'),
@@ -27,7 +27,7 @@ export default function StopSkill() {
   const cardKeys = ['stop', 'step', 'obsrv', 'pm'];
 
   return (
-    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenBG}}>
+    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
       {cardKeys.map((key, index) => {
         const card = t(`stop.${key}`, { returnObjects: true });
         return (

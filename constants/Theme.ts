@@ -12,6 +12,9 @@ export const Themes = {
       buttonColor: Colors.grey50,
       bodyBackground: Colors.grey80,
       titleColor: Colors.black,
+      // cards
+      cardBG: Colors.grey80,
+      screenCardsBG: Colors.white,
     },
     dark: {
       primaryAccent: '#321D47',
@@ -24,5 +27,8 @@ export const Themes = {
       buttonColor: Colors.black,
       bodyBackground: Colors.grey10,
       titleColor: Colors.white,
+      // cards
+      cardBG: Colors.grey10,
+      screenCardsBG: Colors.black,
     },
   };

@@ -9,7 +9,7 @@ import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
 
-const getImage = (imageName: String) => {
+const getImage = (imageName) => {
   const images = {
     "letter_T.png": require('../../assets/images/letters/letter_T.png'),
     "letter_I.png": require('../../assets/images/letters/letter_I.png'),
@@ -26,7 +26,7 @@ export default function TippSkill() {
   const cardKeys = ['temp', 'exc', 'breath', 'pmr']; 
 
   return (
-    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenBG}}>
+    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
         {cardKeys.map((key, index) => {
           const card = t(`tipp.${key}`, { returnObjects: true });
           return (
@@ -41,4 +41,3 @@ export default function TippSkill() {
     </ScrollView>
   )
 };
-

@@ -6,35 +6,18 @@ import {
   Animated,
   Appearance,
 } from 'react-native';
-import {View, Colors } from 'react-native-ui-lib';
+import { View, Colors, SchemeType } from 'react-native-ui-lib';
+// themes
+import { Themes } from '@/constants/Theme'
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
+// language
 import { useTranslation } from "react-i18next";
-
-export const themes = {
-  light: {
-    screenBG: Colors.grey80,
-    textColor: Colors.black,
-    secondary: Colors.grey60,
-    accentColor: Colors.black,
-    buttonColor: Colors.grey50,
-  },
-  dark: {
-    screenBG: Colors.grey10,
-    textColor: Colors.white,
-    secondary: Colors.grey20,
-    accentColor: Colors.white,
-    buttonColor: Colors.black,
-  },
-};
-
-const systemColorScheme = Appearance.getColorScheme();
-Colors.setScheme(systemColorScheme);
-Colors.loadSchemes(themes);
 
 export default function SquareBreathingTimer() {
   const { t } = useTranslation();
   useThemeRefresh();
-  Colors.loadSchemes(themes);
+  const systemColorScheme = Appearance.getColorScheme();
+  Colors.loadSchemes(Themes);
 
   const [currentPhase, setCurrentPhase] = useState('Inhale');
   const [timeLeft, setTimeLeft] = useState(4);
@@ -139,7 +122,7 @@ export default function SquareBreathingTimer() {
       }
     };
 
-  const themedStyles = getThemedStyles(systemColorScheme);
+  const themedStyles = getThemedStyles();
 
   return (
     <View style={[themedStyles.container, { backgroundColor: Colors.screenBG }]}>
@@ -175,8 +158,9 @@ export default function SquareBreathingTimer() {
   );
 };
 
-const getThemedStyles = (scheme) =>
-  StyleSheet.create({
+
+const getThemedStyles = () => {
+  return StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: 'center',
@@ -256,5 +240,4 @@ const getThemedStyles = (scheme) =>
       fontWeight: '600',
     },
   });
-
-
+};
