@@ -1,25 +1,13 @@
 import React from 'react';
+// ui components
 import { ScrollView, Appearance } from 'react-native';
 import { Colors } from 'react-native-ui-lib';
-import { useThemeRefresh } from '../../hooks/useThemeRefresh';
-import { useTranslation } from "react-i18next";
 import ImageCard from '@/components/ImageCard';
-
-Colors.loadSchemes({
-  light: {
-    screenBG: Colors.white,
-    cardBG: Colors.grey80,
-    textColor: Colors.black,
-  },
-  dark: {
-    screenBG: Colors.black,
-    cardBG: Colors.grey10,
-    textColor: Colors.white,
-  },
-});
-
-const colorScheme = Appearance.getColorScheme();
-Colors.setScheme(colorScheme);
+// themes
+import { useThemeRefresh } from '../../hooks/useThemeRefresh';
+import { Themes } from '@/constants/Theme'
+//language
+import { useTranslation } from "react-i18next";
 
 const getImage = (imageName) => {
   const images = {
@@ -32,12 +20,13 @@ const getImage = (imageName) => {
 
 export default function TippSkill() {
   useThemeRefresh();
+  Colors.loadSchemes(Themes);
   
   const { t } = useTranslation();
   const cardKeys = ['temp', 'exc', 'breath', 'pmr']; 
 
   return (
-    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenBG}}>
+    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
         {cardKeys.map((key, index) => {
           const card = t(`tipp.${key}`, { returnObjects: true });
           return (
@@ -52,4 +41,3 @@ export default function TippSkill() {
     </ScrollView>
   )
 };
-

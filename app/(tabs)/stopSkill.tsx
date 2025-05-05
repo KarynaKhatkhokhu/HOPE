@@ -1,27 +1,13 @@
 import React from 'react';
+// ui components
 import { ScrollView, Appearance } from 'react-native';
 import { Colors } from 'react-native-ui-lib';
-import { useThemeRefresh } from '../../hooks/useThemeRefresh';
-import { useTranslation } from "react-i18next";
 import ImageCard from '@/components/ImageCard';
-
-
-Colors.loadSchemes({
-  light: {
-    screenBG: Colors.white,
-    cardBG: Colors.grey80,
-    textColor: Colors.black,
-  },
-  dark: {
-    screenBG: Colors.black,
-    cardBG: Colors.grey10,
-    textColor: Colors.white,
-  },
-});
-
-const systemColorScheme = Appearance.getColorScheme();
-Colors.setScheme(systemColorScheme);
-
+// themes
+import { useThemeRefresh } from '../../hooks/useThemeRefresh';
+import { Themes } from '@/constants/Theme'
+//language
+import { useTranslation } from "react-i18next";
 
 const getImage = (imageName) => {
   const images = {
@@ -35,12 +21,13 @@ const getImage = (imageName) => {
 
 export default function StopSkill() {
   useThemeRefresh();
+  Colors.loadSchemes(Themes);
   
   const { t } = useTranslation();
   const cardKeys = ['stop', 'step', 'obsrv', 'pm'];
 
   return (
-    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenBG}}>
+    <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
       {cardKeys.map((key, index) => {
         const card = t(`stop.${key}`, { returnObjects: true });
         return (

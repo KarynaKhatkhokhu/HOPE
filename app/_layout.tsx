@@ -5,11 +5,19 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { Appearance } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Themes } from '@/constants/Theme';
+import { Colors } from 'react-native-ui-lib';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+// makes sure to detecd correct color sheme on load
+const scheme = Appearance.getColorScheme() ?? 'light';
+Colors.setScheme(scheme);
+Colors.loadSchemes(Themes);
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();

@@ -1,7 +1,4 @@
 {
-  "effective_rthinking": {
-    "title": "__STRING_NOT_TRANSLATED__"
-  },
   "index": {
     "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",
     "welcome": "Welcome!",
@@ -12,8 +9,53 @@
     "hold": "Hold",
     "inhale": "Inhale",
     "pause": "Pause",
+    "seconds": "s",
     "start": "Start",
     "stop": "Stop",
     "title": "Square Breathing"
+  },
+  "stop": {
+    "obsrv": {
+      "image": "letter_O.png",
+      "text": "Notice what is going on inside and outside you. What is the situation? What are your thoughts and feelings? What are others saying or doing?",
+      "title": "OBSERVE"
+    },
+    "pm": {
+      "image": "letter_P.png",
+      "text": "Act with awareness. In deciding what to do, consider your thoughts and feelings, the situation, and other people's thoughts and feelings. Think about your goals. Ask Wise Mind: Which actions will make it better or worse?",
+      "title": "PROCEED MINDFULLY"
+    },
+    "step": {
+      "image": "letter_T.png",
+      "text": "Take a step back from the situation. Take a break. Let go. Take a deep breath. Do not let your feelings make you act impulsively.",
+      "title": "TAKE A STEP BACK"
+    },
+    "stop": {
+      "image": "letter_S.png",
+      "text": "Do not just react. Stop! Freeze! Do not move a muscle! Your emotions may try to make you act without thinking. Stay in control!",
+      "title": "STOP"
+    }
+  },
+  "tipp": {
+    "breath": {
+      "image": "letter_P.png",
+      "text": "Try Box Breathing: Breathe in for 4 seconds, hold it for 4 seconds, breathe out 4, and hold 4. Start again, and continue until you feel more calm.\nYou can use the timer in this application.",
+      "title": "PACED BREATHING"
+    },
+    "exc": {
+      "image": "letter_I.png",
+      "text": "Do INTENSE exercise to match your intense emotion. Sprint to the end of the street, do jumping jacks, push ups, intense dancing.",
+      "title": "INTENSE EXERCISE"
+    },
+    "pmr": {
+      "image": "letter_P.png",
+      "text": "Focus on 1 muscle group at a time. Tighten your muscles as much as possible for 5 seconds. Then release & relax. Repeat with other muscle groups.",
+      "title": "PAIRED MUSCLE RELAXATION"
+    },
+    "temp": {
+      "image": "letter_T.png",
+      "text": "Change your body TEMPERATURE. Splash your face with cold water, hold an ice cube, let car AC blow on your face, take a cold shower. When applying water, try to make sure that it hits the back of your neck.",
+      "title": "TEMPERATURE"
+    }
   }
 }
