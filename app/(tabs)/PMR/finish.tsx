@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ScrollView, Appearance } from 'react-native';
-import { View, Button, Colors, Text, Image, SchemeType } from 'react-native-ui-lib';
+import { ScrollView } from 'react-native';
+import { View, Button, Colors, Text, Image } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
 import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
 import { useTranslation } from "react-i18next";
