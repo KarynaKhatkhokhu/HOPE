@@ -5,6 +5,7 @@
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "chest_and_upper_back": {
+      "description": "__STRING_NOT_TRANSLATED__",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "face": {
@@ -32,7 +33,10 @@
       "description": "__STRING_NOT_TRANSLATED__",
       "title": "__STRING_NOT_TRANSLATED__"
     },
-    "you_are_done": "You are Done!"
+    "you_are_done": {
+      "text": "You are Done!",
+      "title": "You can repeat the excercise as many times as nessesary, and for as long as you need. To do it again, just tap the button \"Reset\" "
+    }
   },
   "index": {
     "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",

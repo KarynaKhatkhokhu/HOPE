@@ -5,6 +5,7 @@
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "chest_and_upper_back": {
+      "description": "__STRING_NOT_TRANSLATED__",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "face": {
@@ -32,7 +33,10 @@
       "description": "__STRING_NOT_TRANSLATED__",
       "title": "__STRING_NOT_TRANSLATED__"
     },
-    "you_are_done": "Ви закінчили!"
+    "you_are_done": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    }
   },
   "index": {
     "intro": "Ця програма є коротким довідником з ДПТ (діалектично-поведінкової терапії), призначеним для легкого доступу до ДПТ навичок під час епізодів, панічних атак тощо. Щоб дізнатися, як глибше використовувати ці навички, ми рекомендуємо звернутися до роздаткових матеріалів ДПТ Марші М. Лінехан.",

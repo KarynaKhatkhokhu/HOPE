@@ -5,6 +5,7 @@
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "chest_and_upper_back": {
+      "description": "__STRING_NOT_TRANSLATED__",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "face": {
@@ -32,7 +33,10 @@
       "description": "__STRING_NOT_TRANSLATED__",
       "title": "__STRING_NOT_TRANSLATED__"
     },
-    "you_are_done": "Вы закончили!"
+    "you_are_done": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    }
   },
   "index": {
     "intro": "Это приложение представляет собой краткий справочник по ДПТ (диалектически-поведенческой терапии), которое преднозначено сделать ДПТ навыки легкодоступными во время эпизодов, панических атак и т. д. Чтобы узнать, как использовать эти навыки более подробно, мы рекомендуем обратиться к раздаточным материалам по ДПТ Марши М. Лайнхан.",

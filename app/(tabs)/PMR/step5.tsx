@@ -7,7 +7,7 @@ export default function PMRHandsStep() {
   return (
     <PMRStepScreen
       title={t('effective_rethinking.chest_and_upper_back.title')}
-      description={t('effective_rethinking.face.description')}
+      description={t('effective_rethinking.chest_and_upper_back.description')}
       iconName="PMR_chest_and_upper_back"
       nextRoute="/PMR/step6"
     />
