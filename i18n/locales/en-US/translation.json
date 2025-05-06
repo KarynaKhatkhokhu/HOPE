@@ -1,6 +1,38 @@
 {
   "effective_rethinking": {
-    "title": "Effective Rethinking & Paired Relaxation"
+    "calves_and_feet": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "chest_and_upper_back": {
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "face": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "hands_and_forearms": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "shoulders_and_neck": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "stomach_and_core": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "thighs": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "title": "Effective Rethinking & Paired Relaxation",
+    "upper_arms_and_biceps": {
+      "description": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "you_are_done": "You are Done!"
   },
   "index": {
     "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",

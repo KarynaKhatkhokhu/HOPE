@@ -23,7 +23,7 @@ export default function PMRIntro() {
     >
       <View style={{ marginBottom: 0 }}>
         <Text text50 color={Colors.textColor} style={{ fontWeight: 'bold', marginBottom: 16 }}>
-          You are Done!
+          {t('effective_rethinking.you_are_done')}
         </Text>
         
         <Text text70 color={Colors.textColor}>

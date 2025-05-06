@@ -1,11 +1,14 @@
 import PMRStepScreen from '../../../components/PMRStepScreen';
+import { useTranslation } from "react-i18next";
 
 export default function PMRHandsStep() {
+  const { t } = useTranslation();
+
   return (
     <PMRStepScreen
-      title="Tense your hands and forearms tightly. Hold for 5 seconds..."
-      description="Now breathe out and release all tension. Let your muscles go soft."
-      iconName="PMR_arms"
+      title={t('effective_rethinking.calves_and_feet.title')}
+      description={t('effective_rethinking.calves_and_feet.description')}
+      iconName="PMR_calves_and_feet"
       nextRoute="/PMR/finish"
     />
   );

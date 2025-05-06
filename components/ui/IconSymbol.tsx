@@ -19,10 +19,14 @@ const MAPPING = {
   'STOP': { library: Feather, name: 'octagon' },
   'cold': { library: MaterialCommunityIcons, name: 'thermometer-low' },
   'PMR': { library: MaterialCommunityIcons, name: 'meditation' },
+  'PMR_hands_and_forearms': { library: MaterialCommunityIcons, name: 'hand-front-left' },
   'PMR_arms': { library: MaterialCommunityIcons, name: 'arm-flex' },
-  'PMR_legs': { library: MaterialCommunityIcons, name: 'seat-legroom-reduced' },
-  'PMR_shoulders': { library: MaterialCommunityIcons, name: 'account' },
+  'PMR_shoulders_and_neck': { library: MaterialIcons, name: 'perm-identity' },
   'PMR_face': { library: MaterialCommunityIcons, name: 'baby-face-outline' },
+  'PMR_chest_and_upper_back': { library: MaterialCommunityIcons, name: 'lungs'},
+  'PMR_thighs': { library: MaterialCommunityIcons, name: 'seat-legroom-extra'},
+  'PMR_stomach_and_core': { library: MaterialIcons, name: 'man'},
+  'PMR_calves_and_feet': { library: MaterialCommunityIcons, name: 'foot-print'},
   'settings': { library: MaterialIcons, name: 'settings' }
 } as Partial<
   Record<
