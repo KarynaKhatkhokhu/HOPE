@@ -1,25 +1,10 @@
 import { View, Button, Colors } from "react-native-ui-lib"
 import { useRouter } from 'expo-router';
-
-Colors.loadSchemes({
-    light: {
-      screenBG: Colors.grey80,
-      cardBG: Colors.grey80,
-      textColor: Colors.black,
-      myButtonColor: Colors.grey50,
-      myButtonTextColor: Colors.black
-    },
-    dark: {
-      screenBG: Colors.grey10,
-      cardBG: Colors.grey10,
-      textColor: Colors.white,
-      myButtonColor: Colors.black,
-      myButtonTextColor: Colors.white
-    },
-  });
+import { Themes } from "@/constants/Theme";
 
 export default function ResetButton() {
   const router = useRouter();
+  Colors.loadSchemes(Themes);
 
   return (
   <View style={{ position: 'absolute', top: 30, left: 16 }}>

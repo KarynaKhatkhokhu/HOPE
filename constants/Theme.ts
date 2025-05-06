@@ -15,6 +15,10 @@ export const Themes = {
       // cards
       cardBG: Colors.grey80,
       screenCardsBG: Colors.white,
+      // ERModel
+      myButtonColor: Colors.grey50,
+      myButtonTextColor: Colors.black,
+      modalOverlayColor: 'rgba(0,0,0,0.4)',
     },
     dark: {
       primaryAccent: '#321D47',
@@ -30,5 +34,9 @@ export const Themes = {
       // cards
       cardBG: Colors.grey10,
       screenCardsBG: Colors.black,
+      // ERModel
+      myButtonColor: Colors.black,
+      myButtonTextColor: Colors.white,
+      modalOverlayColor: 'rgba(0,0,0,0.4)',
     },
   };

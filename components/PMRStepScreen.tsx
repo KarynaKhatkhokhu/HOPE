@@ -1,28 +1,13 @@
 import React from 'react';
-import { ScrollView, View, Image, Appearance } from 'react-native';
-import { Text, Button, Colors } from 'react-native-ui-lib';
+import { ScrollView, View } from 'react-native';
+import { Text, Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../hooks/useThemeRefresh';
 import { useTranslation } from "react-i18next";
-import { useRouter } from 'expo-router';
 import ResetButton from './ResetButton';
 import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
 import BreathingCircle from './BreathingCircle';
 import { IconSymbol } from './ui/IconSymbol';
-
-export const themes = {
-  light: {
-    screenBG: Colors.grey80,
-    textColor: Colors.black,
-  },
-  dark: {
-    screenBG: Colors.grey10,
-    textColor: Colors.white,
-  },
-};
-
-const systemColorScheme = Appearance.getColorScheme();
-Colors.setScheme(systemColorScheme);
-Colors.loadSchemes(themes);
+import { Themes } from '@/constants/Theme';
 
 export default function PMRStepScreen({
     title,
@@ -36,10 +21,10 @@ export default function PMRStepScreen({
     nextRoute: string;
   }) {
   useThemeRefresh();
-  Colors.loadSchemes(themes);
+  Colors.loadSchemes(Themes);
   
   const { t } = useTranslation();
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <ScrollView 
