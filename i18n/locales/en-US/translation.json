@@ -1,36 +1,38 @@
 {
   "effective_rethinking": {
     "calves_and_feet": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Flex your feet upward, then curl your toes. Hold… Relax.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "chest_and_upper_back": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Take a deep breath and hold it. Expand your chest. Then exhale.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
+    "close": "Close",
+    "description": "Combine calming your body with reframing your thoughts.\n\n1. Picture the stressful situation.\n2. Notice what's making it worse.\n3. Say a helpful thought aloud (or in your head) as you exhale and relax.\n\nExample: “I’ve gotten through worse before. So relax.”",
     "face": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Tighten your jaw, scrunch your eyes. Hold… Let go.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "hands_and_forearms": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Clench your fists tightly. Hold… Now release.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "shoulders_and_neck": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Raise your shoulders up toward your ears. Hold… Release.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "stomach_and_core": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Pull in your stomach muscles tightly. Hold… Now let go.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "thighs": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Tense your thighs. Squeeze your legs together. Hold… Release.",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "title": "Effective Rethinking & Paired Relaxation",
     "upper_arms_and_biceps": {
-      "description": "__STRING_NOT_TRANSLATED__",
+      "description": "Bend your elbows and tense your arms. Hold… Now relax",
       "title": "__STRING_NOT_TRANSLATED__"
     },
     "you_are_done": {

@@ -18,7 +18,7 @@ export default function PMRIntro() {
 
   return (
     <ScrollView 
-      style={{ backgroundColor: Colors.screenBG }} 
+      style={{ backgroundColor: Colors.screenBG, paddingTop: 15 }} 
       contentContainerStyle={{ padding: 24, justifyContent: 'center', flexGrow: 1 }}
     >
       <View style={{ marginBottom: 0 }}>
@@ -65,6 +65,18 @@ export default function PMRIntro() {
         style={{marginVertical: 10}}
         onPress={() => setModalVisible(true)}
       />
+
+      <Button 
+        label="Tip: Following the Animation Circle"
+        size={Button.sizes.large}
+        backgroundColor={Colors.myButtonColor}
+        color={Colors.textColor}
+        outline={true}
+        outlineColor={Colors.textColor}
+        style={{marginVertical: 0}}
+        onPress={() => setModalVisible(true)}
+      />
+
       <EffectiveRethinkingModal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </ScrollView>
   );
