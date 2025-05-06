@@ -30,7 +30,8 @@ export default function EffectiveRethinkingModal({
                       padding: 24,
                       width: '100%',
                       maxWidth: 400,}}>
-          <Image style={styles.illustration} source={require('../assets/images/PMREFFTHINKING_EN.png')}/>
+          <Image style={{tintColor: Colors.textColor,
+                         width: '100%'}} source={require('../assets/images/PMREFFTHINKING_EN.png')}/>
           <Text style={{fontSize: 18,
                         fontWeight: 'bold',
                         marginBottom: 12,
@@ -61,9 +62,5 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     paddingVertical: 8,
     paddingHorizontal: 16,
-  },
-  illustration:
-  {
-    width: '100%' 
   },
 });
