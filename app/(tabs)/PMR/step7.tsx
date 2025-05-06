@@ -6,7 +6,7 @@ export default function PMRHandsStep() {
       title="Tense your hands and forearms tightly. Hold for 5 seconds..."
       description="Now breathe out and release all tension. Let your muscles go soft."
       iconName="PMR_arms"
-      nextRoute="/PMR/step3"
+      nextRoute="/PMR/step8"
     />
   );
 }

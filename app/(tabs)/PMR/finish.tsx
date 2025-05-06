@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ScrollView } from 'react-native';
-import { View, Button, Colors, Text, Image } from 'react-native-ui-lib';
+import { ScrollView, Appearance } from 'react-native';
+import { View, Button, Colors, Text, Image, SchemeType } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
 import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
 import { useTranslation } from "react-i18next";
@@ -23,7 +23,7 @@ export default function PMRIntro() {
     >
       <View style={{ marginBottom: 0 }}>
         <Text text50 color={Colors.textColor} style={{ fontWeight: 'bold', marginBottom: 16 }}>
-          Progressive Muscle Relaxation
+          You are Done!
         </Text>
         
         <Text text70 color={Colors.textColor}>
