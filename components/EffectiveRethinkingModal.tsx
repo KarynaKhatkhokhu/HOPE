@@ -31,7 +31,8 @@ export default function EffectiveRethinkingModal({
                       width: '100%',
                       maxWidth: 400,}}>
           <Image style={{tintColor: Colors.textColor,
-                         width: '100%'}} source={require('../assets/images/PMREFFTHINKING_EN.png')}/>
+                         width: '100%',
+                         resizeMode: 'contain',}} source={require('../assets/images/PMREFFTHINKING_EN.png')}/>
           <Text style={{fontSize: 18,
                         fontWeight: 'bold',
                         marginBottom: 12,
@@ -41,15 +42,11 @@ export default function EffectiveRethinkingModal({
           <Text style={{fontSize: 14,
                        marginBottom: 16,
                        color: Colors.textColor,}}>
-            Combine calming your body with reframing your thoughts.{"\n\n"}
-            1. Picture the stressful situation.{"\n"}
-            2. Notice what's making it worse.{"\n"}
-            3. Say a helpful thought aloud (or in your head) as you exhale and relax.{"\n\n"}
-            Example: “I’ve gotten through worse before. So relax.”
+            {t('effective_rethinking.description')}
           </Text>
 
           <Pressable onPress={onClose} style={styles.closeButton}>
-            <Text style={{color: Colors.textAccentBlue, fontWeight: '600',}}>Close</Text>
+            <Text style={{color: Colors.textAccentBlue, fontWeight: '600',}}>{t('effective_rethinking.close')}</Text>
           </Pressable>
         </View>
       </View>
