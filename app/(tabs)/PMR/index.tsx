@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { ScrollView } from 'react-native';
 import { View, Button, Colors, Text, Image } from 'react-native-ui-lib';
-import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
-import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 import { Themes } from '@/constants/Theme';
+import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
+import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
+import ModalTip from '@/components/ModalTip';
 
 export default function PMRIntro() {
   useThemeRefresh();
@@ -14,7 +15,8 @@ export default function PMRIntro() {
   const { t } = useTranslation();
   const router = useRouter();
 
-  const [modalVisible, setModalVisible] = useState(false);
+  const [erVisible, setErVisible] = useState(false);
+  const [circleTipVisible, setCircleTipVisible] = useState(false);
 
   return (
     <ScrollView 
@@ -63,7 +65,7 @@ export default function PMRIntro() {
         outline={true}
         outlineColor={Colors.textColor}
         style={{marginVertical: 10}}
-        onPress={() => setModalVisible(true)}
+        onPress={() => setErVisible(true)}
       />
 
       <Button 
@@ -74,10 +76,11 @@ export default function PMRIntro() {
         outline={true}
         outlineColor={Colors.textColor}
         style={{marginVertical: 0}}
-        onPress={() => setModalVisible(true)}
+        onPress={() => setCircleTipVisible(true)}
       />
 
-      <EffectiveRethinkingModal visible={modalVisible} onClose={() => setModalVisible(false)} />
+      <EffectiveRethinkingModal visible={erVisible} onClose={() => setErVisible(false)} />
+      <ModalTip visible={circleTipVisible} onClose={() => setCircleTipVisible(false)} modalDescription={t('effective_rethinking.circle_animation_tip.description')} modalTitle={t('effective_rethinking.circle_animation_tip.title')}/>
     </ScrollView>
   );
 }
