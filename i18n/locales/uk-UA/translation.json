@@ -49,6 +49,12 @@
     "welcome": "Вітаємо!",
     "welcome_to": "У вашому ДПТ помічнику"
   },
+  "progressive_muscle_relaxation": {
+    "description": "__STRING_NOT_TRANSLATED__",
+    "index_title": "__STRING_NOT_TRANSLATED__",
+    "instruction": "__STRING_NOT_TRANSLATED__",
+    "take_a_moment": "__STRING_NOT_TRANSLATED__"
+  },
   "square_breathing": {
     "exhale": "Видих",
     "hold": "Тримаємо",

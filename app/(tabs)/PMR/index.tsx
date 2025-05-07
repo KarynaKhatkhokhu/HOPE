@@ -25,27 +25,26 @@ export default function PMRIntro() {
     >
       <View style={{ marginBottom: 0 }}>
         <Text text50 color={Colors.textColor} style={{ fontWeight: 'bold', marginBottom: 16 }}>
-          Progressive Muscle Relaxation
+          {t('progressive_muscle_relaxation.index_title')}
         </Text>
         
         <Text text70 color={Colors.textColor}>
-          This short exercise will guide you to release tension in your body and calm your mind. 
-          It only takes a few minutes and can help reduce stress and anxiety.
+          {t('progressive_muscle_relaxation.description')}
         </Text>
 
         <View style={{ alignItems: 'center', marginBottom: 32, marginTop: 32 }}>
           <Image
             source={require('../../../assets/images/adaptive-icon.png')} // Replace with your calm illustration
-            style={{ width: 200, height: 200, resizeMode: 'contain' }}
+            style={{ width: 100, height: 100, resizeMode: 'contain' }}
           />
         </View>
       
         <Text text60 color={Colors.textColor} style={{ marginBottom: 16, textAlign: 'center' }}>
-          Sit or lie down comfortably. Let your hands rest gently.
+          {t('progressive_muscle_relaxation.instruction')}          
         </Text>
   
         <Text text70 color={Colors.textColor} style={{ marginBottom: 32, textAlign: 'center' }}>
-          Take a moment to settle in before we begin.
+        {t('progressive_muscle_relaxation.take_a_moment')}
         </Text>
       </View>
 

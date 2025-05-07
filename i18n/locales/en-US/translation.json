@@ -49,6 +49,12 @@
     "welcome": "Welcome!",
     "welcome_to": "To your DBT helper"
   },
+  "progressive_muscle_relaxation": {
+    "description": "This short exercise will guide you to release tension in your body and calm your mind.\nIt only takes a few minutes and can help reduce stress and anxiety.",
+    "index_title": "Progressive Muscle Relaxation",
+    "instruction": "Sit or lie down comfortably. Let your hands rest gently.\nYou can also perform the excercise standing.",
+    "take_a_moment": "Take a moment to settle in before we begin."
+  },
   "square_breathing": {
     "exhale": "Exhale",
     "hold": "Hold",
