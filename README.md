@@ -45,6 +45,7 @@ Supported language: RU·UA·EN
 
 - [ ] ==5-4-3-2-1 screen (can be navigated from STOP)==
 - [ ] ==lagnuage can be changed in settings==
+- [ ] T in TIPP is pressable and has an ice bowl as an illustration (as well as an extended list of cooling methods)
 ---
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
