@@ -50,7 +50,7 @@ export default function PMRIntro() {
       </View>
 
       <Button
-        label="I’m ready"
+        label={t('button.imready')}
         onPress={() => router.navigate("/PMR/step1")}
         size={Button.sizes.large}
         backgroundColor={Colors.myButtonColor || Colors.grey60}
@@ -58,7 +58,7 @@ export default function PMRIntro() {
       />
 
       <Button 
-        label="Tip: Effective Rethinking"
+        label={t('button.tip_effective_rethinking')}
         size={Button.sizes.large}
         backgroundColor={Colors.myButtonColor}
         color={Colors.textColor}
@@ -69,7 +69,7 @@ export default function PMRIntro() {
       />
 
       <Button 
-        label="Tip: Following the Animation Circle"
+        label={t('button.tip_following_the_animation')}
         size={Button.sizes.large}
         backgroundColor={Colors.myButtonColor}
         color={Colors.textColor}

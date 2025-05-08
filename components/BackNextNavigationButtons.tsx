@@ -1,8 +1,10 @@
 import { View, Button, Colors } from "react-native-ui-lib"
 import { useRouter } from 'expo-router';
 import { Themes } from "@/constants/Theme";
+import { useTranslation } from "react-i18next";
 
 export default function BackNextNavigationButtons({nextPageRoute}) {
+  const { t } = useTranslation();
   const router = useRouter();
   Colors.loadSchemes(Themes);
 
@@ -10,7 +12,7 @@ export default function BackNextNavigationButtons({nextPageRoute}) {
   <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 12 }}>
           <View style={{ flex: 1 }}>
               <Button 
-              label="Back" 
+              label={t('button.back')}
               onPress={() => router.dismiss(1)} 
               size={Button.sizes.large}
               backgroundColor={Colors.myButtonColor}
@@ -20,7 +22,7 @@ export default function BackNextNavigationButtons({nextPageRoute}) {
   
           <View style={{ flex: 1 }}>
               <Button 
-              label="Next" 
+              label={t('button.next')} 
               onPress={() => router.navigate(nextPageRoute)} 
               size={Button.sizes.large}
               backgroundColor={Colors.myButtonColor}

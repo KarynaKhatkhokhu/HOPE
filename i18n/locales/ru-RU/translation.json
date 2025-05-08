@@ -1,4 +1,12 @@
 {
+  "button": {
+    "back": "Назад",
+    "imready": "Поехали!",
+    "next": "Вперед",
+    "reset": "Сбросить",
+    "tip_effective_rethinking": "Tip: Эфективные убеждения",
+    "tip_following_the_animation": "Tip: Следование за анимацией"
+  },
   "effective_rethinking": {
     "calves_and_feet": {
       "description": "Напрягите ступни, потянитесь носочками наверх, не отрываю стопу от земли, затем согните пальцы ног. Удерживайте... Расслабьтесь.",
