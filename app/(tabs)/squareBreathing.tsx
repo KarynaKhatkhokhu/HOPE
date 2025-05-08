@@ -23,6 +23,7 @@ export default function SquareBreathingTimer() {
   const [currentPhase, setCurrentPhase] = useState('Inhale');
   const [timeLeft, setTimeLeft] = useState(4);
   const [isRunning, setIsRunning] = useState(false);
+  const [activeSide, setActiveSide] = useState(0);
 
   const phases = ['Inhale', 'Hold_1', 'Exhale', 'Hold_2'];
   const duration = 4;
@@ -77,6 +78,13 @@ export default function SquareBreathingTimer() {
         }
       });
 
+
+      if (nextPhaseIndex === 0) {
+        setActiveSide(0);
+      } else {
+        setActiveSide(nextPhaseIndex);
+      }
+
       setCurrentPhase(nextPhase);
       setTimeLeft(duration);
     }
@@ -94,6 +102,7 @@ export default function SquareBreathingTimer() {
     setCurrentPhase('Inhale');
     setTimeLeft(duration);
     sideAnim.setValue(0);
+    setActiveSide(0);
   };
 
   const getSquareStyles = (side) => {
@@ -108,8 +117,10 @@ export default function SquareBreathingTimer() {
           ? [Colors.secondary, Colors.secondary, Colors.accentColor, Colors.secondary, Colors.secondary]
           : [Colors.secondary, Colors.secondary, Colors.secondary, Colors.accentColor, Colors.secondary],
     });
-
-    return { backgroundColor };
+  
+    const zIndex = side === activeSide ? 4 : 1;  
+  
+    return { backgroundColor, zIndex };
   };
 
   const displayPhase = (phase) =>
