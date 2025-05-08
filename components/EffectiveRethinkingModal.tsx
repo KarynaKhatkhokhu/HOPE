@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, View, Text, StyleSheet, Pressable, Image } from 'react-native';
+import { Modal, View, Text, StyleSheet, Pressable, Image, ScrollView } from 'react-native';
 // themes
 import { Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '@/hooks/useThemeRefresh';
@@ -29,7 +29,12 @@ export default function EffectiveRethinkingModal({
                       borderRadius: 12,
                       padding: 24,
                       width: '100%',
-                      maxWidth: 400,}}>
+                      maxWidth: 400,
+                      maxHeight: '90%', }}>
+                        <ScrollView
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}
+          >
           <Image style={{tintColor: Colors.textColor,
                          width: '100%',
                          resizeMode: 'contain',}} source={require('../assets/images/PMREFFTHINKING_EN.png')}/>
@@ -42,12 +47,15 @@ export default function EffectiveRethinkingModal({
           <Text style={{fontSize: 14,
                        marginBottom: 16,
                        color: Colors.textColor,}}>
+            {t('effective_rethinking.image_annotation')}
+            {"\n"}
             {t('effective_rethinking.description')}
           </Text>
 
           <Pressable onPress={onClose} style={styles.closeButton}>
             <Text style={{color: Colors.textAccentBlue, fontWeight: '600',}}>{t('effective_rethinking.close')}</Text>
           </Pressable>
+          </ScrollView>
         </View>
       </View>
     </Modal>
@@ -59,5 +67,8 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     paddingVertical: 8,
     paddingHorizontal: 16,
+  },
+  scrollContent: {
+    paddingBottom: 16,
   },
 });

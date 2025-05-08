@@ -34,7 +34,7 @@ export default function PMRIntro() {
 
         <View style={{ alignItems: 'center', marginBottom: 32, marginTop: 32 }}>
           <Image
-            source={require('../../../assets/images/figure_v1.png')} // Replace with your calm illustration
+            source={require('../../../assets/images/figure_v1.png')}
             style={{ width: 100, height: 100, resizeMode: 'contain' }}
             tintColor={Colors.textColor}
           />

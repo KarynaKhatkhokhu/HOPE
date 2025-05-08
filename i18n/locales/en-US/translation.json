@@ -9,11 +9,11 @@
       "title": "Chest and Upper Back"
     },
     "circle_animation_tip": {
-      "description": "- As the circle gets bigger, breath in and contract your muscles.\n- As the circle stops, hold your muscles locked. You can keep breathing in, or you can hold your breath.\n- As the circle gets smaller, let go of the tension, and breath out.",
+      "description": "• As the circle gets bigger, breath in and contract your muscles.\n• As the circle stops, hold your muscles locked. You can keep breathing in, or you can hold your breath.\n• As the circle gets smaller, let go of the tension, and breath out.",
       "title": "In this module, you can follow the  circle animation."
     },
     "close": "Close",
-    "description": "Combine calming your body with reframing your thoughts.\n\n1. Picture the stressful situation.\n2. Notice what's making it worse.\n3. Say a helpful thought aloud (or in your head) as you exhale and relax.\n\nExample: “I’ve gotten through worse before. So relax.”",
+    "description": "Examples:\n\n\"It is going to be OK, therefore, relax.\"\n\"I may not like this, but I can survive this, therefore, relax.\"\n\"I am in control, therefore, relax.\"\n\"I have value wether I believe it or not, therefore, relax.\"\n\nThe combination of effective rethinking with paired relaxation is a method of using both cognitive restructuring and progressive muscle relaxation to bring down arousal rapidly in moments of high stress.\n\nPrepare effective thoughts when you are regulated, in order to able to use them in a stressfull moment. \n\n!! Otherwise, use one of the generic examples above. !!\n\nThe procedure for it is as follows:\n1. Identify a situation (a prompting event) that is often related to distressing emotions, and in which you want to work on reducing your emotional reactions.”\n2. Ask yourself, ‘What must I be telling myself for this situation to be so upsetting?’ For example, if taking difficult exams is a really stressful event for you, you might be telling yourself during the exam things like ‘I am going to fail this,’ ‘If I fail, I might as well quit because i will never go anywhere in life,’ ‘if i fail, people will know it and think i am no good,’ or ‘if i fail, it will mean that i am either a lazy good-for-nothing or am stupid.’\n3. Now rethink the situation in such a way as to counteract the thoughts and interpretations that cause you so much stress. As you rethink the situation, write down as many effective thoughts as you can to replace each of the stressful thoughts.\n4. Prepare yourself for the next time the stressful event or one like it occurs. To do this, combine rehearsal of your effective thoughts with paired relaxation. To do this, as you breathe in, imagine the stressful event is happening to you. Be sure to imagine you are in the stressful scene, not watching it as on television. Before breathing out, say to yourself (in a convincing tone) an effective self-statement followed by “... so, relax.” as you breathe out while intentionally relaxing all your muscles.\n5. Try to practice this in a regulated state.\n6. When the stressful situation occurs, practice your effective rethinking and paired relaxing.",
     "face": {
       "description": "Tighten your jaw, scrunch your eyes. Hold… Let go.",
       "title": "Face Muscles"
@@ -22,6 +22,7 @@
       "description": "Clench your fists tightly. Hold… Now release.",
       "title": "Hands & Forearms"
     },
+    "image_annotation": "[Inhale] \"Effective rethinking...\" => [Hold] \"...therefore...\" => [Exhale] \"...relax.\"↺\n",
     "shoulders_and_neck": {
       "description": "Raise your shoulders up toward your ears. Hold… Release.",
       "title": "Shoulders & Neck"
