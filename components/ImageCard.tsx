@@ -1,8 +1,8 @@
 import { Card } from 'react-native-ui-lib';
 
-export default function ImageCard({cardText, cardImage, cardTitle, cardBGColor, cardTextColor}) {
+export default function ImageCard({cardText, cardImage, cardTitle, cardBGColor, cardTextColor, cardOnPress = () => {}}) {
     return (
-      <Card  width={'98%'} onPress={() => console.log('pressed')} enableShadow={true} row={true}
+      <Card  width={'98%'} onPress={cardOnPress} enableShadow={true} row={true}
        padding={true}
        style={{margin: 4, backgroundColor: cardBGColor}}>
         <Card.Image

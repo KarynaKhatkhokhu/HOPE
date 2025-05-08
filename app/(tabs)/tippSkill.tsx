@@ -8,6 +8,7 @@ import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
+import { useRouter } from 'expo-router';
 
 const getImage = (imageName) => {
   const images = {
@@ -23,12 +24,20 @@ export default function TippSkill() {
   Colors.loadSchemes(Themes);
   
   const { t } = useTranslation();
+  const router = useRouter();
   const cardKeys = ['temp', 'exc', 'breath', 'pmr']; 
 
   return (
     <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
         {cardKeys.map((key, index) => {
           const card = t(`tipp.${key}`, { returnObjects: true });
+
+          const handlePress = key === 'pmr'
+          ? () => {
+              router.navigate("/(tabs)/PMR");
+            }
+          : undefined; 
+
           return (
             <ImageCard
               key={index}
@@ -37,6 +46,7 @@ export default function TippSkill() {
               cardTitle={card.title}
               cardBGColor={Colors.cardBG}
               cardTextColor={Colors.textColor}
+              cardOnPress={handlePress}
             />
           );
         })}
