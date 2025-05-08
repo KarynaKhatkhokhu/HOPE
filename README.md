@@ -38,17 +38,19 @@ Supported language: RU·UA·EN
 
 ## TODO
 
-- [ ] *proofread the translated text*
+- [x] proofread the translated text
 - [x] add AveBrain Logo
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
-- [ ] potentially: Paired Muscle Relaxation do-along screen
+- [x] potentially: Paired Muscle Relaxation do-along screen
 
 
 ### Technical Debt / Refactoring Tasks
 
 - [ ] cleanup Square Breathing animation
 - [ ] optimise asset size
-- [ ] extract color scheme in separate files, clean up and normalise loadSchemes
+- [x] extract color scheme in separate files clean up and normalise loadSchemes
+    - [x] clean up themes for PMR files
+    - [x] make sure to clean up themes for components
 - [ ] normalize components (as functions)
 - [ ] cleanup unused components
