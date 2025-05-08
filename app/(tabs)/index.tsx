@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
+    borderRadius: 10
   },
   footer: {
     height: 100,
