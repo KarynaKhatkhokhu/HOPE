@@ -1,19 +1,32 @@
-import { Link, Stack } from 'expo-router';
+import { Link, Stack, useRouter } from 'expo-router';
 import { StyleSheet } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native-ui-lib';
+// themes
+import { Colors } from 'react-native-ui-lib';
+import { useThemeRefresh } from '@/hooks/useThemeRefresh';
+import { Themes } from '@/constants/Theme';
 
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 
 export default function NotFoundScreen() {
+  useThemeRefresh();
+  Colors.loadSchemes(Themes);
+
+  const router = useRouter();
+
   return (
     <>
       <Stack.Screen options={{ title: 'Oops!' }} />
-      <ThemedView style={styles.container}>
-        <ThemedText type="title">This screen doesn't exist.</ThemedText>
-        <Link href="/" style={styles.link}>
-          <ThemedText type="link">Go to home screen!</ThemedText>
+      <View backgroundColor={Colors.cardBG} style={styles.container}>
+        <Text text60 style={{color: Colors.textColor}}>This screen doesn't exist.</Text>
+        <Link href="/" asChild style={{margin: 10}} >
+        <TouchableOpacity onPress={() => router.replace('/(tabs)')}
+          hitSlop={{ top: 10, bottom: 50, left: 10, right: 10 }}>
+            <Text text30BO color={Colors.textAccentBlue}>
+              Go to home screen!
+            </Text>
+        </TouchableOpacity>
         </Link>
-      </ThemedView>
+      </View>
     </>
   );
 }

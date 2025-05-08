@@ -1,31 +1,33 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
-import '@/i18n'
+import '@/i18n';
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Colors } from 'react-native-ui-lib';
+import { useThemeRefresh } from '@/hooks/useThemeRefresh';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  useThemeRefresh(); // ensures theme stays synced dynamically
+
+  const activeColor = Colors.primaryAccent ?? Colors.textColor;
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
+        tabBarActiveTintColor: activeColor,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
           },
           default: {},
         }),
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -38,6 +40,13 @@ export default function TabLayout() {
         options={{
           title: 'Square Breathing',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="square" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="PMR"
+        options={{
+          title: 'PMR',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="PMR" color={color} />,
         }}
       />
       <Tabs.Screen

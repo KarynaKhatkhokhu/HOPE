@@ -1,61 +1,121 @@
 {
-    "index": {
-        "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",
-        "welcome": "Welcome!",
-        "welcome_to": "To your DBT helper"
+  "button": {
+    "back": "Back",
+    "imready": "I'm ready!",
+    "next": "Next",
+    "reset": "Reset",
+    "tip_effective_rethinking": "Tip: Effective Rethinking",
+    "tip_following_the_animation": "Tip: Following the Animation"
+  },
+  "effective_rethinking": {
+    "calves_and_feet": {
+      "description": "Flex your feet upward, then curl your toes. Hold… Relax.",
+      "title": "Calves & Feet"
     },
-    "square_breathing": {
-        "title": "Square Breathing",
-        "start": "Start",
-        "stop": "Stop",
-        "inhale": "Inhale",
-        "hold": "Hold",
-        "exhale": "Exhale",
-        "seconds": "s",
-        "pause": "Pause"
+    "chest_and_upper_back": {
+      "description": "Take a deep breath and hold it. Expand your chest. Then exhale.",
+      "title": "Chest and Upper Back"
     },
-    "tipp": {
-        "temp": {
-            "title": "TEMPERATURE",
-            "text": "Change your body TEMPERATURE. Splash your face with cold water, hold an ice cube, let car AC blow on your face, take a cold shower. When applying water, try to make sure that it hits the back of your neck.",
-            "image": "letter_T.png"
-        },
-        "exc": {
-            "title": "INTENSE EXERCISE",
-            "text": "Do INTENSE exercise to match your intense emotion. Sprint to the end of the street, do jumping jacks, push ups, intense dancing.",
-            "image": "letter_I.png"
-        },
-        "breath": {
-            "title": "PACED BREATHING",
-            "text": "Try Box Breathing: Breathe in for 4 seconds, hold it for 4 seconds, breathe out 4, and hold 4. Start again, and continue until you feel more calm.\nYou can use the timer in this application.",
-            "image": "letter_P.png"
-        },
-        "pmr": {
-            "title": "PAIRED MUSCLE RELAXATION",
-            "text": "Focus on 1 muscle group at a time. Tighten your muscles as much as possible for 5 seconds. Then release & relax. Repeat with other muscle groups.",
-            "image": "letter_P.png"
-        }
+    "circle_animation_tip": {
+      "description": "• As the circle gets bigger, breath in and contract your muscles.\n• As the circle stops, hold your muscles locked. You can keep breathing in, or you can hold your breath.\n• As the circle gets smaller, let go of the tension, and breath out.",
+      "title": "In this module, you can follow the circle animation."
+    },
+    "close": "Close",
+    "description": "Examples:\n\n\"It is going to be OK, therefore, relax.\"\n\"I may not like this, but I can survive this, therefore, relax.\"\n\"I am in control, therefore, relax.\"\n\"I have value wether I believe it or not, therefore, relax.\"\n\nThe combination of effective rethinking with paired relaxation is a method of using both cognitive restructuring and progressive muscle relaxation to bring down arousal rapidly in moments of high stress.\n\nPrepare effective thoughts when you are regulated, in order to able to use them in a stressfull moment. !! Otherwise, use one of the generic examples above. !!\n\nThe procedure for it is as follows:\n1. Identify a situation (a prompting event) that is often related to distressing emotions, and in which you want to work on reducing your emotional reactions.\n2. Ask yourself, ‘What must I be telling myself for this situation to be so upsetting?’ For example, if taking difficult exams is a really stressful event for you, you might be telling yourself during the exam things like ‘I am going to fail this,’ ‘If I fail, I might as well quit because i will never go anywhere in life,’ ‘if i fail, people will know it and think i am no good,’ or ‘if i fail, it will mean that i am either a lazy good-for-nothing or am stupid.’\n3. Now rethink the situation in such a way as to counteract the thoughts and interpretations that cause you so much stress. \n\nFor example: “If I fail, it will only be one event in my career,” “One failure will not define my life/career,” “People don’t pay as much attention to others as I think they do, including me.”\n\nAs you rethink the situation, write down as many effective thoughts as you can to replace each of the stressful thoughts.\n\n5. Prepare yourself for the next time the stressful event or one like it occurs. To do this, combine rehearsal of your effective thoughts with paired relaxation. To do this, as you breathe in, imagine the stressful event is happening to you. Be sure to imagine you are in the stressful scene, not watching it as on television. Before breathing out, say to yourself (in a convincing tone) an effective self-statement followed by “... so, relax.” as you breathe out while intentionally relaxing all your muscles.\n6. Try to practice this in a regulated state.\n7. When the stressful situation occurs, practice your effective rethinking and paired relaxing.",
+    "face": {
+      "description": "Tighten your jaw, scrunch your eyes. Hold… Let go.",
+      "title": "Face Muscles"
+    },
+    "hands_and_forearms": {
+      "description": "Clench your fists tightly. Hold… Now release.",
+      "title": "Hands & Forearms"
+    },
+    "image_annotation": "[Inhale] \"Effective rethinking...\" => [Hold] \"...therefore...\" => [Exhale] \"...relax.\"↺\n",
+    "shoulders_and_neck": {
+      "description": "Raise your shoulders up toward your ears. Hold… Release.",
+      "title": "Shoulders & Neck"
+    },
+    "stomach_and_core": {
+      "description": "Pull in your stomach muscles tightly. Hold… Now let go.",
+      "title": "Stomach & Core"
+    },
+    "thighs": {
+      "description": "Tense your thighs. Squeeze your legs together. Hold… Release.",
+      "title": "Thighs"
+    },
+    "title": "Effective Rethinking & Paired Relaxation",
+    "upper_arms_and_biceps": {
+      "description": "Bend your elbows and tense your arms. Hold… Now relax",
+      "title": "Upper Arms & Biceps"
+    },
+    "you_are_done": {
+      "text": "You can repeat the excercise as many times as nessesary, and for as long as you need. To do it again, just tap the \"Reset\" button.",
+      "title": "You are Done!"
+    }
+  },
+  "index": {
+    "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",
+    "welcome": "Welcome!",
+    "welcome_to": "To your DBT helper"
+  },
+  "progressive_muscle_relaxation": {
+    "description": "This short exercise will guide you to release tension in your body and calm your mind.\nIt only takes a few minutes and can help reduce stress and anxiety.",
+    "index_title": "Progressive Muscle Relaxation",
+    "instruction": "Sit or lie down comfortably. Let your hands rest gently.\nYou can also perform the excercise standing.",
+    "take_a_moment": "Take a moment to settle in before we begin."
+  },
+  "square_breathing": {
+    "exhale": "Exhale",
+    "hold": "Hold",
+    "inhale": "Inhale",
+    "pause": "Pause",
+    "seconds": "s",
+    "start": "Start",
+    "stop": "Stop",
+    "title": "Square Breathing"
+  },
+  "stop": {
+    "obsrv": {
+      "image": "letter_O.png",
+      "text": "Notice what is going on inside and outside you. What is the situation? What are your thoughts and feelings? What are others saying or doing?",
+      "title": "OBSERVE"
+    },
+    "pm": {
+      "image": "letter_P.png",
+      "text": "Act with awareness. In deciding what to do, consider your thoughts and feelings, the situation, and other people's thoughts and feelings. Think about your goals. Ask Wise Mind: Which actions will make it better or worse?",
+      "title": "PROCEED MINDFULLY"
+    },
+    "step": {
+      "image": "letter_T.png",
+      "text": "Take a step back from the situation. Take a break. Let go. Take a deep breath. Do not let your feelings make you act impulsively.",
+      "title": "TAKE A STEP BACK"
     },
     "stop": {
-        "stop": {
-            "title": "STOP",
-            "text": "Do not just react. Stop! Freeze! Do not move a muscle! Your emotions may try to make you act without thinking. Stay in control!",
-            "image": "letter_S.png"
-        },
-        "step": {
-            "title": "TAKE A STEP BACK",
-            "text": "Take a step back from the situation. Take a break. Let go. Take a deep breath. Do not let your feelings make you act impulsively.",
-            "image": "letter_T.png"
-        },
-        "obsrv": {
-            "title": "OBSERVE",
-            "text": "Notice what is going on inside and outside you. What is the situation? What are your thoughts and feelings? What are others saying or doing?",
-            "image": "letter_O.png"
-        },
-        "pm": {
-            "title": "PROCEED MINDFULLY",
-            "text": "Act with awareness. In deciding what to do, consider your thoughts and feelings, the situation, and other people's thoughts and feelings. Think about your goals. Ask Wise Mind: Which actions will make it better or worse?",
-            "image": "letter_P.png"
-        }
+      "image": "letter_S.png",
+      "text": "Do not just react. Stop! Freeze! Do not move a muscle! Your emotions may try to make you act without thinking. Stay in control!",
+      "title": "STOP"
     }
+  },
+  "tipp": {
+    "breath": {
+      "image": "letter_P.png",
+      "text": "Try Box Breathing: Breathe in for 4 seconds, hold it for 4 seconds, breathe out 4, and hold 4. Start again, and continue until you feel more calm.\nYou can use the timer in this application.",
+      "title": "PACED BREATHING"
+    },
+    "exc": {
+      "image": "letter_I.png",
+      "text": "Do INTENSE exercise to match your intense emotion. Sprint to the end of the street, do jumping jacks, push ups, intense dancing.",
+      "title": "INTENSE EXERCISE"
+    },
+    "pmr": {
+      "image": "letter_P.png",
+      "text": "Focus on 1 muscle group at a time. Tighten your muscles as much as possible for 5 seconds. Then release & relax. Repeat with other muscle groups.",
+      "title": "PAIRED MUSCLE RELAXATION"
+    },
+    "temp": {
+      "image": "letter_T.png",
+      "text": "Change your body TEMPERATURE. Splash your face with cold water, hold an ice cube, let car AC blow on your face, take a cold shower. When applying water, try to make sure that it hits the back of your neck.",
+      "title": "TEMPERATURE"
+    }
+  }
 }
