@@ -1,7 +1,7 @@
 import React from 'react';
 // ui components
-import { Image, StyleSheet, Linking, Appearance } from 'react-native';
-import { Text, View, Colors, TouchableOpacity, SchemeType } from 'react-native-ui-lib';
+import { Image, StyleSheet, Linking } from 'react-native';
+import { Text, View, Colors, TouchableOpacity } from 'react-native-ui-lib';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 // color themes

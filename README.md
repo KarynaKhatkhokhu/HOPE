@@ -53,6 +53,9 @@ Supported language: RU·UA·EN
 
 ### Technical Debt / Refactoring Tasks
 
+- [ ] proof-read PMR for russian and ukrainian
+- [ ] "Close" should be available on Effective rethinking modal tip at all points, user shouldn't need to scroll all the way down
+---
 - [ ] cleanup Square Breathing animation
 - [ ] optimise asset size
 - [ ] normalize components (as functions)
