@@ -56,7 +56,7 @@ Supported language: RU·UA·EN
 - [ ] proof-read PMR for russian and ukrainian
 - [ ] "Close" should be available on Effective rethinking modal tip at all points, user shouldn't need to scroll all the way down
 ---
-- [ ] cleanup Square Breathing animation
+- [x] cleanup Square Breathing animation
 - [ ] optimise asset size
 - [ ] normalize components (as functions)
 - [ ] cleanup unused components
