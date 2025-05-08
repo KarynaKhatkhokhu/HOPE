@@ -19,7 +19,7 @@ export default function SettingsModal({
           <Text></Text>
 
           <Pressable onPress={onClose} style={styles.closeButton}>
-            <Text style={styles.closeText}>Close</Text>
+            <Text style={styles.closeText}>{t('button.close')}</Text>
           </Pressable>
         </View>
       </View>
