@@ -1,7 +1,7 @@
 import React from 'react';
 // ui components
-import { Image, StyleSheet, Linking, Appearance } from 'react-native';
-import { Text, View, Colors, TouchableOpacity, SchemeType } from 'react-native-ui-lib';
+import { Image, StyleSheet, Linking } from 'react-native';
+import { Text, View, Colors, TouchableOpacity} from 'react-native-ui-lib';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 // color themes
@@ -9,25 +9,32 @@ import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme'
 // translation
 import { useTranslation } from "react-i18next";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
+  const router = useRouter();
 
   useThemeRefresh();
   Colors.loadSchemes(Themes);
 
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/brainNsun_50_transparent.png')}
-          style={styles.logo}
-        />
-      }
-      bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
-      <View style={styles.contentContainer}>
+      <ParallaxScrollView
+        headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
+        headerImage={
+          <View style={styles.header}>
+            <Image
+              source={require('@/assets/images/brainNsun_50_transparent.png')}
+              style={styles.logo}
+            />
+            <TouchableOpacity onPress={() => router.navigate('/settingsTab')} style={styles.settingsButton}>
+              <IconSymbol name="settings" color={Colors.white} size={28} />
+            </TouchableOpacity>
+          </View>
+        }
+        bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
+      <View backgroundColor={Colors.screenBG} style={styles.contentContainer}>
         <View style={styles.titleContainer}>
           <Text text40BO color={Colors.titleColor}>{t("index.welcome")}</Text>
           <HelloWave />
@@ -75,6 +82,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 12,
   },
+  settingsButton: {
+    position: 'absolute',
+    top: 16,
+    right: 16,
+    padding: 8,
+  },
   logo: {
     height: '110%',
     width: '150%',
@@ -92,5 +105,23 @@ const styles = StyleSheet.create({
   },
   inlineText: {
     flexDirection: 'row'
-  }
+  },  
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)', // translucent background
+  },
+  modalView: {
+    width: '85%', // control width explicitly
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 24,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 10,
+  },
 });
