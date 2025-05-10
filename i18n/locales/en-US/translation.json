@@ -1,6 +1,7 @@
 {
   "button": {
     "back": "Back",
+    "close": "__STRING_NOT_TRANSLATED__",
     "imready": "I'm ready!",
     "next": "Next",
     "reset": "Reset",
@@ -63,6 +64,10 @@
     "index_title": "Progressive Muscle Relaxation",
     "instruction": "Sit or lie down comfortably. Let your hands rest gently.\nYou can also perform the excercise standing.",
     "take_a_moment": "Take a moment to settle in before we begin."
+  },
+  "settings": {
+    "page_title": "Settings",
+    "select_language_title": "Select Language"
   },
   "square_breathing": {
     "exhale": "Exhale",
