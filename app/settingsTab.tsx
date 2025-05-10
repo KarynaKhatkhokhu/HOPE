@@ -35,11 +35,11 @@ export default function LanguageSettingsScreen() {
         </Text>
 
         <Picker
+        mode="dropdown"
         style={{color: Colors.textColor}}
         dropdownIconColor={Colors.textColor}
         dropdownIconRippleColor={Colors.primaryAccent}
         selectedValue={selectedLanguage}
-        selectionColor={Colors.primaryAccent}
         itemStyle={{borderStartColor: Colors.primaryAccent}}
         onValueChange={(itemValue, itemIndex) =>
             {setSelectedLanguage(itemValue);
