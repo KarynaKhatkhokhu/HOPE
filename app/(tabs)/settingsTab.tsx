@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { Colors, Button,Text, View } from 'react-native-ui-lib';
+import { Colors,Text, View } from 'react-native-ui-lib';
 import { router, Stack } from 'expo-router';
+import {Picker} from '@react-native-picker/picker';
+// themes
 import { useThemeRefresh } from '@/hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme';
-import {Picker} from '@react-native-picker/picker';
+// language
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import { SUPPORTED_LANGUAGES } from '@/constants/Supported_Languages';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Pressable } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { HorizontalAlignment } from 'react-native-ui-lib/src/components/gridListItem';
 
 export default function LanguageSettingsScreen() {
   useThemeRefresh();
@@ -19,26 +18,19 @@ export default function LanguageSettingsScreen() {
 
   const { t } = useTranslation();
   
-//   console.log(AsyncStorage.getItem("language"));
-
-//   const languages = [
-//     { label: 'English', value: 'en' },
-//     { label: 'Русский', value: 'ru' },
-//     { label: 'Українська', value: 'uk' },
-//   ];
-
-//   const [selectedLanguage, setSelectedLanguage] = useState(AsyncStorage.getItem("language"));
-    const [selectedLanguage, setSelectedLanguage] = useState();
-
-    // useEffect(() => {
-    // AsyncStorage.getItem("language").then((lang) => {
-    //     if (lang) setSelectedLanguage(lang);
-    // });
-    // }, []);
+    const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+        
+    useEffect(() => {
+      const loadLanguage = async () => {
+        const lang = await AsyncStorage.getItem('language');
+        setSelectedLanguage(lang ?? i18next.language); // fallback to 'en' if null
+      };
+      loadLanguage();
+    }, []);
 
   return (
     <>
-      <Stack.Screen options={{ title: t('settings.page_title'), headerShown: true, headerBackVisible: true}} />
+      <Stack.Screen options={{ title: t('settings.page_title'), headerShown: true}} />
       <View style={[styles.container, { backgroundColor: Colors.cardBG }]}>
         <Text text60 style={styles.label} color={Colors.textColor}>
           {t('settings.select_language_title')}
@@ -65,19 +57,27 @@ export default function LanguageSettingsScreen() {
 
       <View style={{flexDirection: 'row'}}>
       <TouchableOpacity
-            onPress={() => {
-                console.log('Touchable Pressed');
-            }}
-            style={{
-              flex:1,
-                marginTop: 20,
-                padding: 12,
-                backgroundColor: Colors.primaryAccent,
-                borderRadius: 8,
-        }}
-        >
-            <Text style={{ color: Colors.textColor }}>{t('button.save')}</Text>
-        </TouchableOpacity>
+  onPress={async () => {
+    try {
+      if (selectedLanguage) {
+        await AsyncStorage.setItem('language', selectedLanguage);
+        await i18next.changeLanguage(selectedLanguage); // optional: apply immediately
+        console.log('Language saved:', selectedLanguage);
+      }
+    } catch (e) {
+      console.error('Failed to save language:', e);
+    }
+  }}
+  style={{
+    flex: 1,
+    marginTop: 20,
+    padding: 12,
+    backgroundColor: Colors.primaryAccent,
+    borderRadius: 8,
+  }}
+>
+  <Text style={{ color: Colors.textColor }}>{t('button.save')}</Text>
+</TouchableOpacity>
 
         <TouchableOpacity
             onPress={() => {
