@@ -61,25 +61,20 @@
   },
   "obsrv": {
     "five": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "5 ЖЁЛТЫХ вещей которые вы ВИДИТЕ"
     },
     "four": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "4 вещей которые вы ЧУВСТВУЕТЕ"
     },
     "one": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "1 вещь у которой есть ВКУС"
     },
     "three": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "3 вещи у которые вы СЛЫШЫТЕ"
     },
-    "title": "__STRING_NOT_TRANSLATED__",
+    "title": "ОСМОТРИТЕСЬ и НАЗОВИТЕ:",
     "two": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "2 вещи у которых есть ЗАПАХ"
     }
   },
   "progressive_muscle_relaxation": {

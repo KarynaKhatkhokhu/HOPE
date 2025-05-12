@@ -61,25 +61,20 @@
   },
   "obsrv": {
     "five": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "5 ЖОВТИХ речей які ви БАЧИТЕ"
     },
     "four": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "4 речі які ви ВІДЧУВАЄТЄ"
     },
     "one": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "1 річ якої ви відчуваєте СМАК"
     },
     "three": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "3 речі які ви ЧУЄТЕ"
     },
-    "title": "__STRING_NOT_TRANSLATED__",
+    "title": "ОЗЕРНІТЬСЯ та НАЗВІТЬ:",
     "two": {
-      "text": "__STRING_NOT_TRANSLATED__",
-      "title": "__STRING_NOT_TRANSLATED__"
+      "title": "2 речі у яких є ЗАПАХ"
     }
   },
   "progressive_muscle_relaxation": {
