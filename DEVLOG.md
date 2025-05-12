@@ -23,11 +23,12 @@
 ---
 - [ ] add sounds (optional chimes) to Square Breathing
 - [ ] STOP and TIPP steps give extended explanation when pressed
+- [ ] **GERMAN/DEUTSCH translation**
 
 
 ### Technical Debt / Refactoring Tasks
 
-- [ ] proof-read PMR for russian and ukrainian
+- [ ] **proof-read PMR for russian and ukrainian**
 - [ ] "Close" should be available on Effective rethinking modal tip at all points, user shouldn't need to scroll all the way down
 ---
 - [ ] optimise asset size
