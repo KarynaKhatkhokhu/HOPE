@@ -44,7 +44,7 @@ export default function TippSkill() {
               cardImage={getImage(card.image)}
               cardText={card.text}
               cardTitle={card.title}
-              cardBGColor={Colors.cardBG}
+              cardBGColor={key === 'pmr' ? Colors.grey20 : Colors.cardBG}
               cardTextColor={Colors.textColor}
               cardOnPress={handlePress}
             />
