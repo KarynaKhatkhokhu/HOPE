@@ -80,7 +80,7 @@ export default function LanguageSettingsScreen() {
 
         <View style={styles.buttonRow}>
           <Button
-            label={t('button.close')}
+            label={"← "+t('button.close')}
             color={Colors.textColor}
             outline
             outlineColor={Colors.textColor}
@@ -88,7 +88,7 @@ export default function LanguageSettingsScreen() {
             onPress={() => router.back()}
           />
           <Button
-            label={t('button.save')}
+            label={"💾 "+t('button.save')}
             backgroundColor={Colors.primaryAccent}
             color={Colors.textColor}
             outline
@@ -100,7 +100,7 @@ export default function LanguageSettingsScreen() {
 
         <View style={styles.buttonRow}>
           <Button
-            label={t('button.reset')}
+            label={"↺"+ t('button.reset')}
             backgroundColor={Colors.primaryAccent}
             color={Colors.textColor}
             outline
