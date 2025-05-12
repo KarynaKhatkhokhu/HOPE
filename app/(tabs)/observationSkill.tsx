@@ -12,45 +12,44 @@ import { useRouter } from 'expo-router';
 
 const getImage = (imageName) => {
   const images = {
-    "letter_S.png": require('../../assets/images/letters/letter_S.png'),
     "letter_T.png": require('../../assets/images/letters/letter_T.png'),
-    "letter_O.png": require('../../assets/images/letters/letter_O.png'),
+    "letter_I.png": require('../../assets/images/letters/letter_I.png'),
     "letter_P.png": require('../../assets/images/letters/letter_P.png'),
   };
   return images[imageName];
 };
 
-export default function StopSkill() {
+export default function observationSkill() {
   useThemeRefresh();
-  const router = useRouter();
   Colors.loadSchemes(Themes);
   
   const { t } = useTranslation();
-  const cardKeys = ['stop', 'step', 'obsrv', 'pm'];
+  const router = useRouter();
+  const cardKeys = ['temp', 'exc', 'breath', 'pmr']; 
 
   return (
     <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
-      {cardKeys.map((key, index) => {
-        const card = t(`stop.${key}`, { returnObjects: true });
+        {cardKeys.map((key, index) => {
+          const card = t(`tipp.${key}`, { returnObjects: true });
 
-        const handlePress = key === 'obsrv'
+          const handlePress = key === 'pmr'
           ? () => {
-              router.navigate("/(tabs)/observationSkill");
+              router.navigate("/(tabs)/PMR");
             }
           : undefined; 
 
-        return (
-          <ImageCard
-            key={index}
-            cardImage={getImage(card.image)}
-            cardText={card.text}
-            cardTitle={card.title}
-            cardBGColor={key === 'obsrv' ? Colors.grey20 : Colors.cardBG}
-            cardTextColor={Colors.textColor}
-            cardOnPress={handlePress}
-          />
-        );
-      })}
+          return (
+            <ImageCard
+              key={index}
+              cardImage={getImage(card.image)}
+              cardText={card.text}
+              cardTitle={card.title}
+              cardBGColor={key === 'pmr' ? Colors.grey20 : Colors.cardBG}
+              cardTextColor={Colors.textColor}
+              cardOnPress={handlePress}
+            />
+          );
+        })}
     </ScrollView>
   )
 };
