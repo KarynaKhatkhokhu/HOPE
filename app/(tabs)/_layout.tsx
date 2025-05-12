@@ -69,6 +69,13 @@ export default function TabLayout() {
           title: 'Settings',
           href: null, 
         }}/>
+        <Tabs.Screen
+        name="observationSkill"
+        options={{
+          title: 'Observation Skill',
+          href: null, 
+        }}/>
       </Tabs>
+      
   );
 }

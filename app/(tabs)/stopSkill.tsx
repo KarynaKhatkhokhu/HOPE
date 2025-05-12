@@ -8,6 +8,7 @@ import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
+import { useRouter } from 'expo-router';
 
 const getImage = (imageName) => {
   const images = {
@@ -21,6 +22,7 @@ const getImage = (imageName) => {
 
 export default function StopSkill() {
   useThemeRefresh();
+  const router = useRouter();
   Colors.loadSchemes(Themes);
   
   const { t } = useTranslation();
@@ -30,14 +32,22 @@ export default function StopSkill() {
     <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
       {cardKeys.map((key, index) => {
         const card = t(`stop.${key}`, { returnObjects: true });
+
+        const handlePress = key === 'obsrv'
+          ? () => {
+              router.navigate("/(tabs)/observationSkill");
+            }
+          : undefined; 
+
         return (
           <ImageCard
             key={index}
             cardImage={getImage(card.image)}
             cardText={card.text}
             cardTitle={card.title}
-            cardBGColor={Colors.cardBG}
+            cardBGColor={key === 'obsrv' ? Colors.secondary : Colors.cardBG}
             cardTextColor={Colors.textColor}
+            cardOnPress={handlePress}
           />
         );
       })}
