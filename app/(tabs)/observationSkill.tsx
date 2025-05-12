@@ -1,7 +1,7 @@
 import React from 'react';
 // ui components
 import { ScrollView } from 'react-native';
-import { Colors, Text, View } from 'react-native-ui-lib';
+import { Colors, Text } from 'react-native-ui-lib';
 import ImageCard from '@/components/ImageCard';
 // themes
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
@@ -9,8 +9,6 @@ import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { MaterialIcons } from '@expo/vector-icons';
 
 const getImage = (imageName) => {
   const images = {
