@@ -28,7 +28,7 @@ export default function HomeScreen() {
               source={require('@/assets/images/brainNsun_50_transparent.png')}
               style={styles.logo}
             />
-            <TouchableOpacity onPress={() => router.navigate('/settingsTab')} style={styles.settingsButton}>
+            <TouchableOpacity onPress={() => router.navigate('/(tabs)/settingsTab')} style={styles.settingsButton}>
               <IconSymbol name="settings" color={Colors.white} size={28} />
             </TouchableOpacity>
           </View>

@@ -58,7 +58,7 @@ export default function ModalTip({
           </Text>}
 
           <Pressable onPress={onClose} style={styles.closeButton}>
-            <Text style={{color: Colors.textAccentBlue, fontWeight: '600',}}>{t('effective_rethinking.close')}</Text>
+            <Text style={{color: Colors.textAccentBlue, fontWeight: '600',}}>{t('button.close')}</Text>
           </Pressable>
         </View>
       </View>
