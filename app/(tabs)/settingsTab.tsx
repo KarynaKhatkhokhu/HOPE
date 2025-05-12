@@ -7,6 +7,7 @@ import {Picker} from '@react-native-picker/picker';
 import { useThemeRefresh } from '@/hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme';
 // language
+import * as Localization from "expo-localization";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import { SUPPORTED_LANGUAGES } from '@/constants/Supported_Languages';
@@ -76,7 +77,7 @@ export default function LanguageSettingsScreen() {
           }}}
       />
 
-<Button 
+    <Button 
         label={t('button.close')}
         size={Button.sizes.large}
         backgroundColor={Colors.myButtonColor}
@@ -88,6 +89,36 @@ export default function LanguageSettingsScreen() {
             router.back();
         }}
       />
+        </View>
+
+        <View style={{flexDirection: 'row', marginVertical: 25}}>
+      <Button 
+        label={t('button.reset')}
+        size={Button.sizes.large}
+        backgroundColor={Colors.myButtonColor}
+        color={Colors.textColor}
+        outline={true}
+        outlineColor={Colors.textColor}
+        style={{marginVertical: 0, flex:1, margin: 5, backgroundColor: Colors.primaryAccent}}
+        onPress={async () => {
+          try {
+              await AsyncStorage.removeItem("language");
+              const locale = Localization.locale;
+              let savedLanguage;
+              if (locale.startsWith("ru")) {
+                savedLanguage = "ru-RU";
+              } else if (locale.startsWith("uk")) {
+                savedLanguage = "uk-UA";
+              } else {
+                savedLanguage = "en-US";
+              }
+              i18next.changeLanguage(savedLanguage);
+              setSelectedLanguage(savedLanguage);
+              console.log('Settings reset');
+            } catch (e) {
+            console.error('Failed to reset settings:', e);
+          }}}
+          />
         </View>
       </View>
       </>
