@@ -1,7 +1,7 @@
 import React from 'react';
 // ui components
-import { ScrollView, Appearance } from 'react-native';
-import { Colors } from 'react-native-ui-lib';
+import { ScrollView } from 'react-native';
+import { Colors, Text, View } from 'react-native-ui-lib';
 import ImageCard from '@/components/ImageCard';
 // themes
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
@@ -9,12 +9,16 @@ import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const getImage = (imageName) => {
   const images = {
-    "letter_T.png": require('../../assets/images/letters/letter_T.png'),
-    "letter_I.png": require('../../assets/images/letters/letter_I.png'),
-    "letter_P.png": require('../../assets/images/letters/letter_P.png'),
+    "five.png": require('../../assets/images/obsrv/five.png'),
+    "four.png": require('../../assets/images/obsrv/four.png'),
+    "three.png": require('../../assets/images/obsrv/three.png'),
+    "two.png": require('../../assets/images/obsrv/two.png'),
+    "one.png": require('../../assets/images/obsrv/one.png'),
   };
   return images[imageName];
 };
@@ -25,28 +29,21 @@ export default function observationSkill() {
   
   const { t } = useTranslation();
   const router = useRouter();
-  const cardKeys = ['temp', 'exc', 'breath', 'pmr']; 
+  const cardKeys = ['five', 'four', 'three', 'two', 'one']; 
 
   return (
     <ScrollView style={{marginTop: 40, backgroundColor: Colors.screenCardsBG}}>
+        <Text text50BO style={{textAlign:'center', marginBottom: 10}}>{t('obsrv.title')}</Text>
         {cardKeys.map((key, index) => {
-          const card = t(`tipp.${key}`, { returnObjects: true });
-
-          const handlePress = key === 'pmr'
-          ? () => {
-              router.navigate("/(tabs)/PMR");
-            }
-          : undefined; 
-
+          const card = t(`obsrv.${key}`, { returnObjects: true });
           return (
             <ImageCard
               key={index}
-              cardImage={getImage(card.image)}
+              cardImage={getImage(key+'.png')}
               cardText={card.text}
               cardTitle={card.title}
-              cardBGColor={key === 'pmr' ? Colors.grey20 : Colors.cardBG}
+              cardBGColor={Colors.cardBG}
               cardTextColor={Colors.textColor}
-              cardOnPress={handlePress}
             />
           );
         })}

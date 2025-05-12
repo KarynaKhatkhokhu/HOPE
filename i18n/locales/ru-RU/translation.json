@@ -59,6 +59,29 @@
     "welcome": "Добро пожаловать!",
     "welcome_to": "В ваш ДПТ помошник"
   },
+  "obsrv": {
+    "five": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "four": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "one": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "three": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    },
+    "title": "__STRING_NOT_TRANSLATED__",
+    "two": {
+      "text": "__STRING_NOT_TRANSLATED__",
+      "title": "__STRING_NOT_TRANSLATED__"
+    }
+  },
   "progressive_muscle_relaxation": {
     "description": "Это короткое упражнение поможет вам снять напряжение в теле и успокоить разум.\nОно займет всего несколько минут и поможет снизить стресс и беспокойство.",
     "index_title": "Прогрессивная мышечная релаксация",

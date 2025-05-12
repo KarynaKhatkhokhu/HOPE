@@ -59,6 +59,29 @@
     "welcome": "Welcome!",
     "welcome_to": "To your DBT helper"
   },
+  "obsrv": {
+    "five": {
+      "text": "you can see",
+      "title": "5 THINGS"
+    },
+    "four": {
+      "text": "you can touch",
+      "title": "4 THINGS"
+    },
+    "one": {
+      "text": "you can taste",
+      "title": "1 THING"
+    },
+    "three": {
+      "text": "you can hear",
+      "title": "3 THINGS"
+    },
+    "title": "LOOK AROUND AND FIND:",
+    "two": {
+      "text": "you can smell",
+      "title": "2 THINGS"
+    }
+  },
   "progressive_muscle_relaxation": {
     "description": "This short exercise will guide you to release tension in your body and calm your mind.\nIt only takes a few minutes and can help reduce stress and anxiety.",
     "index_title": "Progressive Muscle Relaxation",
