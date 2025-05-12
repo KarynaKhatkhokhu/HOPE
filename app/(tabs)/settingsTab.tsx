@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { Colors,Text, View } from 'react-native-ui-lib';
+import { Colors,Text, View, Button } from 'react-native-ui-lib';
 import { router, Stack } from 'expo-router';
 import {Picker} from '@react-native-picker/picker';
 // themes
@@ -55,44 +55,39 @@ export default function LanguageSettingsScreen() {
             })}
         </Picker>
 
-      <View style={{flexDirection: 'row'}}>
-      <TouchableOpacity
-  onPress={async () => {
-    try {
-      if (selectedLanguage) {
-        await AsyncStorage.setItem('language', selectedLanguage);
-        await i18next.changeLanguage(selectedLanguage); // optional: apply immediately
-        console.log('Language saved:', selectedLanguage);
-      }
-    } catch (e) {
-      console.error('Failed to save language:', e);
-    }
-  }}
-  style={{
-    flex: 1,
-    marginTop: 20,
-    padding: 12,
-    backgroundColor: Colors.primaryAccent,
-    borderRadius: 8,
-  }}
->
-  <Text style={{ color: Colors.textColor }}>{t('button.save')}</Text>
-</TouchableOpacity>
+      <View style={{flexDirection: 'row', marginVertical: 25}}>
+      <Button 
+        label={t('button.save')}
+        size={Button.sizes.large}
+        backgroundColor={Colors.myButtonColor}
+        color={Colors.textColor}
+        outline={true}
+        outlineColor={Colors.textColor}
+        style={{marginVertical: 0, flex:1, margin: 5, backgroundColor: Colors.primaryAccent}}
+        onPress={async () => {
+          try {
+            if (selectedLanguage) {
+              await AsyncStorage.setItem('language', selectedLanguage);
+              await i18next.changeLanguage(selectedLanguage); // optional: apply immediately
+              console.log('Language saved:', selectedLanguage);
+            }
+          } catch (e) {
+            console.error('Failed to save language:', e);
+          }}}
+      />
 
-        <TouchableOpacity
-            onPress={() => {
-                router.back();
-            }}
-            style={{
-              flex:1,
-                marginTop: 20,
-                padding: 12,
-                backgroundColor: Colors.primaryAccent,
-                borderRadius: 8,
+<Button 
+        label={t('button.close')}
+        size={Button.sizes.large}
+        backgroundColor={Colors.myButtonColor}
+        color={Colors.textColor}
+        outline={true}
+        outlineColor={Colors.textColor}
+        style={{marginVertical: 0, flex:1, margin: 5}}
+        onPress={() => {
+            router.back();
         }}
-        >
-            <Text style={{ color: Colors.textColor }}>{t('button.close')}</Text>
-        </TouchableOpacity>
+      />
         </View>
       </View>
       </>
