@@ -61,25 +61,25 @@
   },
   "obsrv": {
     "five": {
-      "text": "you can see",
-      "title": "5 THINGS"
+      "text": "",
+      "title": "5 THINGS you can SEE"
     },
     "four": {
       "text": "you can touch",
-      "title": "4 THINGS"
+      "title": "4 things you can TOUCH"
     },
     "one": {
       "text": "you can taste",
-      "title": "1 THING"
+      "title": "1 thing you can TASTE"
     },
     "three": {
       "text": "you can hear",
-      "title": "3 THINGS"
+      "title": "3 things you can HEAR"
     },
     "title": "LOOK AROUND AND FIND:",
     "two": {
       "text": "you can smell",
-      "title": "2 THINGS"
+      "title": "2 things you can SMELL"
     }
   },
   "progressive_muscle_relaxation": {

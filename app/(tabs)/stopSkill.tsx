@@ -45,7 +45,7 @@ export default function StopSkill() {
             cardImage={getImage(card.image)}
             cardText={card.text}
             cardTitle={card.title}
-            cardBGColor={key === 'obsrv' ? Colors.grey20 : Colors.cardBG}
+            cardBGColor={key === 'obsrv' ? Colors.secondary : Colors.cardBG}
             cardTextColor={Colors.textColor}
             cardOnPress={handlePress}
           />
