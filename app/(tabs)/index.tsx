@@ -9,25 +9,32 @@ import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme'
 // translation
 import { useTranslation } from "react-i18next";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
+  const router = useRouter();
 
   useThemeRefresh();
   Colors.loadSchemes(Themes);
 
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/brainNsun_50_transparent.png')}
-          style={styles.logo}
-        />
-      }
-      bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
-      <View style={styles.contentContainer}>
+      <ParallaxScrollView
+        headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
+        headerImage={
+          <View style={styles.header}>
+            <Image
+              source={require('@/assets/images/brainNsun_50_transparent.png')}
+              style={styles.logo}
+            />
+            <TouchableOpacity onPress={() => router.navigate('/(tabs)/settingsTab')} style={styles.settingsButton}>
+              <IconSymbol name="settings" color={Colors.white} size={28} />
+            </TouchableOpacity>
+          </View>
+        }
+        bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
+      <View backgroundColor={Colors.screenBG} style={styles.contentContainer}>
         <View style={styles.titleContainer}>
           <Text text40BO color={Colors.titleColor}>{t("index.welcome")}</Text>
           <HelloWave />
@@ -75,6 +82,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 12,
   },
+  settingsButton: {
+    position: 'absolute',
+    top: 16,
+    right: 16,
+    padding: 8,
+  },
   logo: {
     height: '110%',
     width: '150%',
@@ -84,6 +97,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
+    borderRadius: 10
   },
   footer: {
     height: 100,
@@ -91,5 +105,11 @@ const styles = StyleSheet.create({
   },
   inlineText: {
     flexDirection: 'row'
+  },  
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)', // translucent background
   }
 });

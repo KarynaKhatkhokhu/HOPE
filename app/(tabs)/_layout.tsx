@@ -63,6 +63,12 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="STOP" color={color} />,
         }}
       />
-    </Tabs>
+      <Tabs.Screen
+        name="settingsTab"
+        options={{
+          title: 'Settings',
+          href: null, 
+        }}/>
+      </Tabs>
   );
 }
