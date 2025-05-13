@@ -63,22 +63,18 @@ export default function PMRStepScreenFirst({
         outline={true}
         outlineColor={Colors.textColor}
         style={{marginVertical: 30}}
-        onPress={() => router.push({
-            pathname: "/modalTip",
-            params: {
-              title: "Effective Thinking",
-              description: "Pause and reflect before reacting.",
-              // image: "PMREFFTHINKING_EN", // Must be resolvable at build time
-            }}
-        )}
-        // onPress={() => setCircleTipVisible(true)}
+        onPress={() =>
+            router.push({
+              pathname: "/modalTip",
+              params: {
+                modalTitle: t('effective_rethinking.circle_animation_tip.title'),
+                modalDescription: t('effective_rethinking.circle_animation_tip.description'),
+                hasTitle: "true",
+                hasText: "true",
+              },
+            })
+          }
       />
-        <ModalTip 
-          visible={circleTipVisible}
-          onClose={() => setCircleTipVisible(false)}
-          modalDescription={t('effective_rethinking.circle_animation_tip.description')}
-          modalTitle={t('effective_rethinking.circle_animation_tip.title')}
-          />
     </ScrollView>
     
   );
