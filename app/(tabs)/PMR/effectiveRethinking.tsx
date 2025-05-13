@@ -8,13 +8,7 @@ import { Themes } from '@/constants/Theme';
 import { useTranslation } from "react-i18next";
 import { router } from 'expo-router';
 
-export default function EffectiveRethinkingModal({
-  visible,
-  onClose,
-}: {
-  visible: boolean;
-  onClose: () => void;
-}) {
+export default function EffectiveRethinkingModal() {
   useThemeRefresh();
   Colors.loadSchemes(Themes);
   const { t } = useTranslation();
