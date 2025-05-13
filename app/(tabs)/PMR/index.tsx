@@ -6,7 +6,6 @@ import { useRouter } from 'expo-router';
 import { Themes } from '@/constants/Theme';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
 import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
-import ModalTip from '@/components/ModalTip';
 
 export default function PMRIntro() {
   useThemeRefresh();
@@ -16,7 +15,6 @@ export default function PMRIntro() {
   const router = useRouter();
 
   const [erVisible, setErVisible] = useState(false);
-  const [circleTipVisible, setCircleTipVisible] = useState(false);
 
   return (
     <ScrollView 
@@ -53,8 +51,9 @@ export default function PMRIntro() {
         label={t('button.imready')}
         onPress={() => router.navigate("/PMR/step1")}
         size={Button.sizes.large}
-        backgroundColor={Colors.myButtonColor || Colors.grey60}
+        backgroundColor={Colors.primaryAccent}
         color={Colors.textColor}
+        outlineColor={Colors.textColor}
       />
 
       <Button 
@@ -68,19 +67,7 @@ export default function PMRIntro() {
         onPress={() => setErVisible(true)}
       />
 
-      <Button 
-        label={t('button.tip_following_the_animation')}
-        size={Button.sizes.large}
-        backgroundColor={Colors.myButtonColor}
-        color={Colors.textColor}
-        outline={true}
-        outlineColor={Colors.textColor}
-        style={{marginVertical: 0}}
-        onPress={() => setCircleTipVisible(true)}
-      />
-
       <EffectiveRethinkingModal visible={erVisible} onClose={() => setErVisible(false)} />
-      <ModalTip visible={circleTipVisible} onClose={() => setCircleTipVisible(false)} modalDescription={t('effective_rethinking.circle_animation_tip.description')} modalTitle={t('effective_rethinking.circle_animation_tip.title')}/>
     </ScrollView>
   );
 }

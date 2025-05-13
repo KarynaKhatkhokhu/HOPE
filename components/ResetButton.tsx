@@ -9,7 +9,7 @@ export default function ResetButton() {
   Colors.loadSchemes(Themes);
 
   return (
-  <View style={{ position: 'absolute', top: 30, left: 16 }}>
+  <View style={{ position: 'absolute', top: 50, left: 16 }}>
     <Button
         label={t('button.reset')}
         onPress={() => router.dismissAll()}

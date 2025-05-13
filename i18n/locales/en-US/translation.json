@@ -2,11 +2,11 @@
   "button": {
     "back": "Back",
     "close": "Close",
-    "imready": "I'm ready!",
+    "imready": ":Let's Go!",
     "next": "Next",
     "reset": "Reset",
     "save": "Save",
-    "tip_effective_rethinking": "Tip: Effective Rethinking",
+    "tip_effective_rethinking": "More: Effective Rethinking",
     "tip_following_the_animation": "Tip: Following the Animation"
   },
   "effective_rethinking": {
