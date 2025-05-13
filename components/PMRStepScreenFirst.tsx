@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { Text, Colors, Button } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../hooks/useThemeRefresh';
@@ -8,7 +8,6 @@ import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
 import BreathingCircle from './BreathingCircle';
 import { IconSymbol } from './ui/IconSymbol';
 import { Themes } from '@/constants/Theme';
-import ModalTip from './ModalTip';
 import { useRouter } from 'expo-router';
 
 export default function PMRStepScreenFirst({
@@ -28,7 +27,6 @@ export default function PMRStepScreenFirst({
   const router = useRouter();
 
   const { t } = useTranslation();
-  const [circleTipVisible, setCircleTipVisible] = useState(false);
 
   return (
     <ScrollView 

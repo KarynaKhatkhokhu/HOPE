@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ScrollView } from 'react-native';
 import { View, Button, Colors, Text, Image } from 'react-native-ui-lib';
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 import { Themes } from '@/constants/Theme';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
-import EffectiveRethinkingModal from '../../../components/EffectiveRethinkingModal';
 
 export default function PMRIntro() {
   useThemeRefresh();
@@ -13,8 +12,6 @@ export default function PMRIntro() {
   
   const { t } = useTranslation();
   const router = useRouter();
-
-  const [erVisible, setErVisible] = useState(false);
 
   return (
     <ScrollView 
@@ -56,18 +53,6 @@ export default function PMRIntro() {
         outlineColor={Colors.textColor}
       />
 
-      <Button 
-        label={t('button.tip_effective_rethinking')}
-        size={Button.sizes.large}
-        backgroundColor={Colors.myButtonColor}
-        color={Colors.textColor}
-        outline={true}
-        outlineColor={Colors.textColor}
-        style={{marginVertical: 10}}
-        onPress={() => setErVisible(true)}
-      />
-
-      <EffectiveRethinkingModal visible={erVisible} onClose={() => setErVisible(false)} />
         <Button 
           label={t('button.tip_effective_rethinking')}
           size={Button.sizes.large}
