@@ -73,34 +73,34 @@ export default function LanguageSettingsScreen() {
               label={lang.label}
               value={lang.value}
               color={Colors.textColor}
-              style={{ backgroundColor: Colors.screenBG }}
+              style={{ backgroundColor: Colors.secondary }}
             />
           ))}
         </Picker>
 
         <View style={styles.buttonRow}>
           <Button
-            label={"← "+t('button.close')}
+            label={t('button.close')}
             color={Colors.textColor}
             outline
             outlineColor={Colors.textColor}
-            style={{marginVertical: 0, flex:1, margin: 5}}
+            style={{marginVertical: 0, flex:1, marginRight: 5}}
             onPress={() => router.back()}
           />
           <Button
-            label={"💾 "+t('button.save')}
+            label={t('button.save')}
             backgroundColor={Colors.primaryAccent}
             color={Colors.textColor}
             outline
             outlineColor={Colors.textColor}
-            style={{marginVertical: 0, flex:1, margin: 5, backgroundColor: Colors.buttonColor}}
+            style={{marginVertical: 0, flex:1, marginLeft: 5, backgroundColor: Colors.buttonColor}}
             onPress={handleSave}
           />
         </View>
 
         <View style={styles.buttonRow}>
           <Button
-            label={"↺"+ t('button.reset')}
+            label={t('button.reset')}
             backgroundColor={Colors.primaryAccent}
             color={Colors.textColor}
             outline
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   },
   label: {
     marginBottom: 12,
+    marginLeft: 10,
   },
   buttonRow: {
     flexDirection: 'row',
