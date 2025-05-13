@@ -20,6 +20,7 @@ export default function HomeScreen() {
   Colors.loadSchemes(Themes);
 
   return (
+    <>
       <ParallaxScrollView
         headerBackgroundColor={{ light: Colors.primaryAccent, dark: Colors.primaryAccent }}
         headerImage={
@@ -28,17 +29,22 @@ export default function HomeScreen() {
               source={require('@/assets/images/brainNsun_50_transparent.png')}
               style={styles.logo}
             />
-            <TouchableOpacity onPress={() => router.navigate('/(tabs)/settingsTab')} style={styles.settingsButton}>
-              <IconSymbol name="settings" color={Colors.white} size={28} />
-            </TouchableOpacity>
           </View>
         }
         bodyBackgroungColor={{ light: Colors.bodyBackground, dark: Colors.bodyBackground}}>
+
+
       <View backgroundColor={Colors.screenBG} style={styles.contentContainer}>
+        <TouchableOpacity onPress={() => router.navigate('/(tabs)/settingsTab')} style={[styles.titleContainer, {marginBottom:5}]}>
+          <IconSymbol name="settings" color={Colors.textColor} size={45} />
+          <Text text50 style={{color: Colors.textColor}}>{t('settings.page_title')}</Text>
+        </TouchableOpacity>
         <View style={styles.titleContainer}>
           <Text text40BO color={Colors.titleColor}>{t("index.welcome")}</Text>
           <HelloWave />
         </View>
+    
+        
 
         <View style={styles.stepContainer}>
           <Text text50M color={Colors.titleColor}>{t("index.welcome_to")}</Text>
@@ -67,6 +73,7 @@ export default function HomeScreen() {
     </View>
 
     </ParallaxScrollView>
+    </>
   );
 }
 
@@ -83,9 +90,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   settingsButton: {
-    position: 'absolute',
-    top: 16,
-    right: 16,
+    position: 'fixed',
+    flexDirection: 'row',
     padding: 8,
   },
   logo: {
