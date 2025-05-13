@@ -9,6 +9,7 @@ import BreathingCircle from './BreathingCircle';
 import { IconSymbol } from './ui/IconSymbol';
 import { Themes } from '@/constants/Theme';
 import ModalTip from './ModalTip';
+import { useRouter } from 'expo-router';
 
 export default function PMRStepScreenFirst({
     title,
@@ -24,6 +25,8 @@ export default function PMRStepScreenFirst({
   useThemeRefresh();
   Colors.loadSchemes(Themes);
   
+  const router = useRouter();
+
   const { t } = useTranslation();
   const [circleTipVisible, setCircleTipVisible] = useState(false);
 
@@ -60,7 +63,15 @@ export default function PMRStepScreenFirst({
         outline={true}
         outlineColor={Colors.textColor}
         style={{marginVertical: 30}}
-        onPress={() => setCircleTipVisible(true)}
+        onPress={() => router.push({
+            pathname: "/modalTip",
+            params: {
+              title: "Effective Thinking",
+              description: "Pause and reflect before reacting.",
+              // image: "PMREFFTHINKING_EN", // Must be resolvable at build time
+            }}
+        )}
+        // onPress={() => setCircleTipVisible(true)}
       />
         <ModalTip 
           visible={circleTipVisible}

@@ -40,6 +40,11 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="modalTip" options = {{
+          presentation: 'transparentModal',
+          animation: 'fade_from_bottom',
+          headerShown: false,
+        }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

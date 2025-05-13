@@ -15,18 +15,18 @@ export default function EffectiveRethinkingModal() {
 
   return (
         <View style={{
-  flex: 1,
-  backgroundColor: Colors.modalOverlayColor ?? 'rgba(0,0,0,0.5)',
-  justifyContent: 'center',
-  padding: 24,
-}}>
-  <View style={{
-    backgroundColor: Colors.cardBG ?? '#fff',
-    borderRadius: 20,
-    padding: 24,
-    maxHeight: '90%',
-  }}>
-                        <ScrollView
+            flex: 1,
+            backgroundColor: Colors.modalOverlayColor ?? 'rgba(0,0,0,0.5)',
+            justifyContent: 'center',
+            padding: 24,
+            }}>
+                <View style={{
+                    backgroundColor: Colors.cardBG ?? '#fff',
+                    borderRadius: 20,
+                    padding: 24,
+                    maxHeight: '90%',
+                }}>
+            <ScrollView
             contentContainerStyle={styles.scrollContent}
             showsVerticalScrollIndicator={false}
           >
