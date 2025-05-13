@@ -68,6 +68,16 @@ export default function PMRIntro() {
       />
 
       <EffectiveRethinkingModal visible={erVisible} onClose={() => setErVisible(false)} />
+        <Button 
+          label={t('button.tip_effective_rethinking')}
+          size={Button.sizes.large}
+          backgroundColor={Colors.myButtonColor}
+          color={Colors.textColor}
+          outline={true}
+          outlineColor={Colors.textColor}
+          style={{marginVertical: 10}}
+          onPress={() => router.navigate("/(tabs)/PMR/effectiveRethinking")}
+/>
     </ScrollView>
   );
 }
