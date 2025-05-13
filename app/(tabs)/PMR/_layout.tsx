@@ -14,9 +14,9 @@ export default function PMRLayout() {
       <Stack.Screen name="index" options={{}} />
       <Stack.Screen name="step1" options={{}} />
       <Stack.Screen name="effectiveRethinking" options = {{
-  presentation: 'modal',
-  animation: 'fade_from_bottom',
-  headerShown: false,
+        presentation: 'transparentModal',
+        animation: 'fade_from_bottom',
+        headerShown: false,
 }}/>
     </Stack>
   );
