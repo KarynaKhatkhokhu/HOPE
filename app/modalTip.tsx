@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 // themes
 import { Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '@/hooks/useThemeRefresh';
