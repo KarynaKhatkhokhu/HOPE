@@ -51,11 +51,12 @@ export default function EffectiveRethinkingModal({
             {"\n"}
             {t('effective_rethinking.description')}
           </Text>
-
+          </ScrollView>
+        <View style={styles.closeButtonContainer}>
           <Pressable onPress={onClose} style={styles.closeButton}>
             <Text style={{color: Colors.textAccentBlue, fontWeight: '600',}}>{t('button.close')}</Text>
           </Pressable>
-          </ScrollView>
+          </View>
         </View>
       </View>
     </Modal>
