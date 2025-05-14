@@ -47,11 +47,9 @@ export default function HomeScreen() {
           <Text text40BO color={Colors.titleColor}>{t("index.welcome")}</Text>
           <HelloWave />
         </View>
-    
-        
+  
 
         <View style={styles.stepContainer}>
-          <Text text50M color={Colors.titleColor}>{t("index.welcome_to")}</Text>
           <Text text60M color={Colors.textColor}>
             {t("index.intro")}
           </Text>
