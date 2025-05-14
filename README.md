@@ -1,6 +1,10 @@
-# HOPE: a compact DBT skills tool
+# HOPE: a compact tool inspired by DBT skills
 
-That will hopefully be usefull to you. These DBT tools are meant to be used in situations of distress. They were originally developed as distress tolerance skills by Marsha M. Linehan to help BPD patients, but since proven usefull for many others.
+That will hopefully be usefull to you.
+
+This application is a tool inspired by DBT, meant to be easily accessible. To actually learn how to use such skills, we recommend referring to Marsha M. Linehan's DBT Handouts.
+
+If your distress is higher than 6 on the distress scale (0 being minimum, and 10 being maximum), reach out for help to your nearest emergency services or contact your therapist.
 
 by [AveBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [RestlessSun](https://github.com/KarynaKhatkhokhu)
 
