@@ -39,6 +39,10 @@ export default function HomeScreen() {
           <IconSymbol name="settings" color={Colors.textColor} size={45} />
           <Text text50 style={{color: Colors.textColor}}>{t('settings.page_title')}</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.navigate('/(tabs)/infoNotice')} style={[styles.titleContainer, {marginBottom:5}]}>
+          <IconSymbol name="info" color={Colors.textColor} size={45} />
+          <Text text50 style={{color: Colors.textColor}}>{t('index.info_notice.page_title')}</Text>
+        </TouchableOpacity>
         <View style={styles.titleContainer}>
           <Text text40BO color={Colors.titleColor}>{t("index.welcome")}</Text>
           <HelloWave />

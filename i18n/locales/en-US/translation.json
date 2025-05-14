@@ -55,6 +55,11 @@
     }
   },
   "index": {
+    "info_notice": {
+      "page_title": "Info Notice",
+      "text": "This application is designed to support general mental well-being but does not constitute medical advice or psychotherapy. It is not intended to diagnose, treat, cure, or prevent any mental health condition. The content and tools provided are not a replacement for professional psychological or medical care.\n\nIn situations of psychological distress, crisis, or if you suspect a mental health disorder, please consult a licensed therapist, physician, or appropriate healthcare provider without delay. This app should not be used as the sole or primary source of help.",
+      "title": "Important Notice:\n This App Is Not a Medical Product"
+    },
     "intro": "This application is a DBT shorthand, meant to be easily accessable during episodes, panic attacks, and so on. To learn how to use these skills in more depth, we recommend refering to Marsha M. Linehan's DBT Handouts.",
     "welcome": "Welcome!",
     "welcome_to": "To your DBT helper"

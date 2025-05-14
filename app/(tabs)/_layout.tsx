@@ -75,6 +75,12 @@ export default function TabLayout() {
           title: 'Observation Skill',
           href: null, 
         }}/>
+        <Tabs.Screen
+        name="infoNotice"
+        options={{
+          title: 'Info Notice Skill',
+          href: null, 
+        }}/>
       </Tabs>
       
   );

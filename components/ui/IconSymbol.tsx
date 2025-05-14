@@ -27,7 +27,8 @@ const MAPPING = {
   'PMR_thighs': { library: MaterialCommunityIcons, name: 'seat-legroom-extra'},
   'PMR_stomach_and_core': { library: MaterialIcons, name: 'man'},
   'PMR_calves_and_feet': { library: MaterialCommunityIcons, name: 'foot-print'},
-  'settings': { library: MaterialIcons, name: 'settings' }
+  'settings': { library: MaterialIcons, name: 'settings' },
+  'info': { library: MaterialIcons, name: 'info' }
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
