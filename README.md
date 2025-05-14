@@ -1,6 +1,6 @@
 # HOPE: a compact DBT skills tool
 
-That will hopefully be usefull to you. These DBT tools are meant to help with panic attacks, suicidal ideations, emotional flashbacks, and other episodes. They were originally developed by Marsha M. Linehan to help BPD patients, but since proven usefull for many others.
+That will hopefully be usefull to you. These DBT tools are meant to be used in situations of distress. They were originally developed as distress tolerance skills by Marsha M. Linehan to help BPD patients, but since proven usefull for many others.
 
 by [AveBrain](https://www.linkedin.com/in/yuliya-kyrychenko-329b2918b/) & [RestlessSun](https://github.com/KarynaKhatkhokhu)
 
