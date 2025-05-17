@@ -7,7 +7,7 @@ module.exports = {
     useKeysAsDefaultValue: false,
     indentation: 2,
     createOldCatalogs: false,
-    keepRemoved: true,
+    keepRemoved: false,
     keySeparator: ".",
     namespaceSeparator: true,
     lexers: {

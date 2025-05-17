@@ -37,4 +37,14 @@ t('tipp.pmr.title')
 t('tipp.pmr.text')
 t('tipp.pmr.image')
 
+-- obsrv --
+
+t('obsrv.one.title')
+t('obsrv.two.title')
+t('obsrv.three.title')
+t('obsrv.four.title')
+t('obsrv.five.title')
+
+
+
 */ 
