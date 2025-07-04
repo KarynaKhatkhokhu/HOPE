@@ -1,6 +1,6 @@
 import React from 'react';
 // ui components
-import { ScrollView, Appearance } from 'react-native';
+import { ScrollView, Image, View } from 'react-native';
 import { Colors } from 'react-native-ui-lib';
 import ImageCard from '@/components/ImageCard';
 // themes
@@ -39,8 +39,8 @@ export default function TippSkill() {
           : undefined; 
 
           return (
+          <View key={index}>
             <ImageCard
-              key={index}
               cardImage={getImage(card.image)}
               cardText={card.text}
               cardTitle={card.title}
@@ -48,7 +48,30 @@ export default function TippSkill() {
               cardTextColor={Colors.textColor}
               cardOnPress={handlePress}
             />
-          );
+            {index === 0 && (
+  <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginVertical: 10 }}>
+    <Image
+      source={require('../../assets/images/ice_tasik.png')}
+      style={{
+        width: 150,
+        height: 150,
+        resizeMode: 'contain',
+        tintColor: 'white'
+      }}
+    />
+    <Image
+      source={require('../../assets/images/shower.png')}
+      style={{
+        width: 150,
+        height: 150,
+        resizeMode: 'contain',
+        tintColor: 'white'
+      }}
+    />
+  </View>
+)}
+          </View>
+        );
         })}
     </ScrollView>
   )
