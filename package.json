@@ -10,7 +10,17 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "extract": "i18next  --config i18next-parser.config.js"
+    "extract": "i18next  --config i18next-parser.config.js",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0 --no-warn-ignored",
+      "prettier --write"
+    ],
+    "**/*.{html,json,css,scss,md,mdx}": [
+      "prettier -w"
+    ]
   },
   "jest": {
     "preset": "jest-expo"
@@ -52,6 +62,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.26.0",
     "@types/jest": "^29.5.12",
     "@types/lodash": "^4.17.16",
@@ -59,10 +71,13 @@
     "@types/react-native": "^0.72.8",
     "@types/react-test-renderer": "^18.3.0",
     "eslint": "^9.26.0",
+    "husky": "^9.1.7",
     "i18next-parser": "^9.3.0",
     "jest": "^29.2.1",
     "jest-expo": "~52.0.3",
+    "lint-staged": "^16.1.2",
     "lodash": "^4.17.21",
+    "prettier": "^3.6.2",
     "react-test-renderer": "18.3.1",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.1"

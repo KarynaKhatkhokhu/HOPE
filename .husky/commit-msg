@@ -1,0 +1,4 @@
+# echo "commit-msg is executed"
+npx --no-install --yes commitlint --edit ".git/COMMIT_EDITMSG"
+npx lint-staged
+# exit 1
