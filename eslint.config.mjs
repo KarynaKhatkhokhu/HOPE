@@ -5,7 +5,7 @@ import tseslint from 'typescript-eslint';
 
 export default [
   {
-    ignores: ['commitlint.config.js'],
+    ignores: ['commitlint.config.js', 'i18next-parser.config.js'],
   },
   ...tseslint.config(
     eslint.configs.recommended,
