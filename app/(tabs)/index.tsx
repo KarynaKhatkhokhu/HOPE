@@ -11,6 +11,8 @@ import { Themes } from '@/constants/Theme'
 import { useTranslation } from "react-i18next";
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useRouter } from 'expo-router';
+// assets
+import brainNsun_50_transparent from '@/assets/images/brainNsun_50_transparent.png';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
@@ -26,7 +28,7 @@ export default function HomeScreen() {
         headerImage={
           <View style={styles.header}>
             <Image
-              source={require('@/assets/images/brainNsun_50_transparent.png')}
+              source={brainNsun_50_transparent}
               style={styles.logo}
             />
           </View>

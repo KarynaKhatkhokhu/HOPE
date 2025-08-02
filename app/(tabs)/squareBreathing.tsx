@@ -12,6 +12,8 @@ import { Themes } from '@/constants/Theme'
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 // language
 import { useTranslation } from "react-i18next";
+// assets
+// import breathChime from '../../assets/breathChime.ogg'; // wip, currently does not play
 
 Colors.loadSchemes(Themes);
 
@@ -29,27 +31,29 @@ export default function SquareBreathingTimer() {
   const duration = 4;
   const sideAnim = useRef(new Animated.Value(0)).current;
 
-  const sound = useRef(null);
+  // all playing sound code is wip
 
-  const playSound = async (phase) => {
-    if (!sound.current) return;
-    try {
-      await sound.current.unloadAsync();
-      const audioFile =
-        phase === 'Inhale'
-          ? require('/../../../assets/breathChime.ogg')
-          : phase === 'Exhale'
-          ? require('../../assets/breathChime.ogg')
-          : null;
+  // const sound = useRef(null);
 
-      if (audioFile) {
-        await sound.current.loadAsync(audioFile);
-        await sound.current.playAsync();
-      }
-    } catch (error) {
-      console.error('Error playing sound:', error);
-    }
-  };
+  // const playSound = async (phase) => {
+  //   if (!sound.current) return;
+  //   try {
+  //     await sound.current.unloadAsync();
+  //     // const audioFile =
+  //     //   phase === 'Inhale'
+  //     //     ? breathChime
+  //     //     : phase === 'Exhale'
+  //     //     ? breathChime
+  //     //     : null;
+
+  //     if (audioFile) {
+  //       await sound.current.loadAsync(audioFile);
+  //       await sound.current.playAsync();
+  //     }
+  //   } catch (error) {
+  //     console.error('Error playing sound:', error);
+  //   }
+  // };
 
   useEffect(() => {
     const subscription = Appearance.addChangeListener(({ colorScheme }) => {
@@ -66,7 +70,7 @@ export default function SquareBreathingTimer() {
       const nextPhaseIndex = (phases.indexOf(currentPhase) + 1) % phases.length;
       const nextPhase = phases[nextPhaseIndex];
 
-      playSound(nextPhase);
+      // playSound(nextPhase);
 
       Animated.timing(sideAnim, {
         toValue: nextPhaseIndex === 0 ? 4 : nextPhaseIndex,

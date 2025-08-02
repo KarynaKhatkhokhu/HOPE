@@ -6,16 +6,22 @@ import ImageCardObsrv from '@/components/ImageCardObsrv';
 // themes
 import { useThemeRefresh } from '../../hooks/useThemeRefresh';
 import { Themes } from '@/constants/Theme'
-//language
+// language
 import { useTranslation } from "react-i18next";
+// assets
+import five from '../../assets/images/obsrv/five.png';
+import four from '../../assets/images/obsrv/four.png';
+import three from '../../assets/images/obsrv/three.png';
+import two from '../../assets/images/obsrv/two.png';
+import one from '../../assets/images/obsrv/one.png';
 
 const getImage = (imageName) => {
   const images = {
-    "five.png": require('../../assets/images/obsrv/five.png'),
-    "four.png": require('../../assets/images/obsrv/four.png'),
-    "three.png": require('../../assets/images/obsrv/three.png'),
-    "two.png": require('../../assets/images/obsrv/two.png'),
-    "one.png": require('../../assets/images/obsrv/one.png'),
+    "five.png": five,
+    "four.png": four,
+    "three.png": three,
+    "two.png": two,
+    "one.png": one,
   };
   return images[imageName];
 };

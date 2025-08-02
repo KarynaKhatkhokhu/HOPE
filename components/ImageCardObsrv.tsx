@@ -1,6 +1,6 @@
 import { Card } from 'react-native-ui-lib';
 
-export default function ImageCardObsrv({cardText, cardImage, cardTitle, cardBGColor, cardTextColor,  cardTint = "", cardOnPress = () => {}}) {
+export default function ImageCardObsrv({cardImage, cardTitle, cardBGColor, cardTextColor,  cardTint = "", cardOnPress = () => {}}) {
     return (
       <Card  width={'98%'} onPress={cardOnPress} enableShadow={true} row={true} 
        padding={true}

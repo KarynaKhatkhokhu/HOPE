@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
 import { Themes } from '@/constants/Theme';
 import { useThemeRefresh } from '../../../hooks/useThemeRefresh';
+import figure_v1 from '../../../assets/images/figure_v1.png';
 
 export default function PMRIntro() {
   useThemeRefresh();
@@ -29,7 +30,7 @@ export default function PMRIntro() {
 
         <View style={{ alignItems: 'center', marginBottom: 32, marginTop: 32 }}>
           <Image
-            source={require('../../../assets/images/figure_v1.png')}
+            source={figure_v1}
             style={{ width: 100, height: 100, resizeMode: 'contain' }}
             tintColor={Colors.textColor}
           />

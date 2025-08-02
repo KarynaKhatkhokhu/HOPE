@@ -9,12 +9,18 @@ import { Themes } from '@/constants/Theme'
 //language
 import { useTranslation } from "react-i18next";
 import { useRouter } from 'expo-router';
+// assests
+import letter_P from '../../assets/images/letters/letter_P.png';
+import letter_I from '../../assets/images/letters/letter_I.png';
+import letter_T from '../../assets/images/letters/letter_T.png';
+import ice_tasik from '../../assets/images/ice_tasik.png';
+import cold_shower from '../../assets/images/shower.png';
 
 const getImage = (imageName) => {
   const images = {
-    "letter_T.png": require('../../assets/images/letters/letter_T.png'),
-    "letter_I.png": require('../../assets/images/letters/letter_I.png'),
-    "letter_P.png": require('../../assets/images/letters/letter_P.png'),
+    "letter_T.png": letter_T,
+    "letter_I.png": letter_I,
+    "letter_P.png": letter_P,
   };
   return images[imageName];
 };
@@ -51,16 +57,16 @@ export default function TippSkill() {
             {index === 0 && (
   <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginVertical: 10 }}>
     <Image
-      source={require('../../assets/images/ice_tasik.png')}
+      source={ice_tasik}
       style={{
         width: 150,
         height: 150,
         resizeMode: 'contain',
-        tintColor: 'white'
+        // tintColor: 'white'
       }}
     />
     <Image
-      source={require('../../assets/images/shower.png')}
+      source={cold_shower}
       style={{
         width: 150,
         height: 150,

@@ -2,7 +2,6 @@ import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { Text, Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '../hooks/useThemeRefresh';
-import { useTranslation } from "react-i18next";
 import ResetButton from './ResetButton';
 import BackNextNavigationButtons from '@/components/BackNextNavigationButtons';
 import BreathingCircle from './BreathingCircle';
@@ -23,7 +22,7 @@ export default function PMRStepScreen({
   useThemeRefresh();
   Colors.loadSchemes(Themes);
   
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   // const router = useRouter();
 
   return (

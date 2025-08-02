@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, View, Text, StyleSheet, Pressable, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Image, ScrollView } from 'react-native';
 // themes
 import { Colors } from 'react-native-ui-lib';
 import { useThemeRefresh } from '@/hooks/useThemeRefresh';
@@ -7,6 +7,8 @@ import { Themes } from '@/constants/Theme';
 // language
 import { useTranslation } from "react-i18next";
 import { router } from 'expo-router';
+// assests
+import PMREFFTHINKING_EN from '../../../assets/images/PMREFFTHINKING_EN.png';
 
 export default function EffectiveRethinkingModal() {
   useThemeRefresh();
@@ -32,7 +34,7 @@ export default function EffectiveRethinkingModal() {
           >
           <Image style={{tintColor: Colors.textColor,
                          width: '100%',
-                         resizeMode: 'contain',}} source={require('../../../assets/images/PMREFFTHINKING_EN.png')}/>
+                         resizeMode: 'contain',}} source={PMREFFTHINKING_EN}/>
           <Text style={{fontSize: 18,
                         fontWeight: 'bold',
                         marginBottom: 12,
